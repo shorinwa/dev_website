@@ -12,6 +12,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 html {
@@ -552,11 +553,63 @@ tbody tr:nth-child(odd) th {
   height:45px;
   display:inline-block;
   float:left;
-  margin:2px 8px 0 0
+  margin:2px 8px 0 0;
 }
 
 .navbar-brand,.navbar-default,.navbar-nav>li>a {
-  color:#FFF !important
+  color:#FFF !important;
 }
 
+.footer {
+  padding: 10px 55px 10px 55px;
+  background-color: #F3F3F3;
+  width: 100%;
+}
 
+.footer-left, .footer-right {
+  display: inline-block;
+  width: 48%;
+  height: 65px;
+  color: black;
+  font-size: 18px;
+  font-weight: 200;
+  padding: 0 0 0 0px;
+}
+
+.footer-left {
+  padding-top: 5px;
+}
+
+.footer-right {
+  text-align: right;
+  float: right;
+  padding-top: 0px;
+  overflow: hidden;
+}
+
+.funding-img {
+  max-height: 200px;
+  max-width: 300px;
+  object-fit: cover;
+  object-position: center-top;
+  display: inline-block;
+  padding: 10px 25px 10px 25px
+}
+
+.footer-left-img, .footer-right-img {
+  max-width: 300px;
+  display: inline-block;
+  padding: 0 10px 0 10px;
+}
+
+.footer-left-img {
+  max-height: 55px;
+}
+
+.footer-right-img {
+  max-height: 80px;
+}
+
+.footer-left-text {
+  font-weight: 400;
+}
