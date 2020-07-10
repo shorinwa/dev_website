@@ -509,54 +509,100 @@ tbody tr:nth-child(odd) th {
   margin-bottom: 0.6em;
 }
 
-.navbar-brand {
-  //font-weight: bold;
-  font-size: 20px;
-  font-weight: 300;
+img.banner-img {
+    max-width: 100%;
+    height: auto;
+    min-height: 150px;
+    border-radius: 0px;
+    margin: 0px;
 }
 
-// change font for navbar
-.navbar, .navbar-nav>li>a {
-  background-color: #8c1515;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 80%;
+.home-masthead{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    width: 70%;
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    h1 {
+       font-size: 3.5rem;
+       font-weight: 300;
+    }
+
 }
 
-// fix menu bar spacing for mobile
-@media(max-width: 40em){
-  .navbar-nav>li>a {
-    padding: 0.75em 0 0.5em 2.5em;
-    font-size: 15px;
-  }
-
-  // fix menu scroll along x axis
-  .navbar-nav {
-    margin-right: 15px;
-  }
+// fix weird masthead text wrap on mobile sizes
+@media (max-width: 767.98px) {
+    .home-masthead{
+        h1 {
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
 }
 
-// fix spacing
-.navbar-nav>li {
-  margin-bottom: 0;
+.news {
+    background-color: #F4F4F4;
+    h2 {
+        text-align: center;
+        color: black;
+        font-weight: 400;
+    }
 }
 
-// fix menu button for mobile
-.navbar-toggle, .navbar-default .navbar-toggle:hover {
-  border: none;
-  background-color: #FFF;
-}
-
-.navbar-img {
-  height:45px;
-  display:inline-block;
-  float:left;
-  margin:2px 8px 0 0
-}
-
-.navbar-brand,.navbar-default,.navbar-nav>li>a {
-  color:#FFF !important
-}
-
-
+// .navbar-brand {
+//   //font-weight: bold;
+//   font-size: 20px;
+//   font-weight: 300;
+// }
+//
+// // change font for navbar
+// .navbar, .navbar-nav>li>a {
+//   background-color: #8c1515;
+//   font-family: 'Open Sans', sans-serif;
+//   text-transform: capitalize;
+//   font-weight: 400;
+//   font-size: 80%;
+// }
+//
+// // fix menu bar spacing for mobile
+// @media(max-width: 40em){
+//   .navbar-nav>li>a {
+//     padding: 0.75em 0 0.5em 2.5em;
+//     font-size: 15px;
+//   }
+//
+//   // fix menu scroll along x axis
+//   .navbar-nav {
+//     margin-right: 15px;
+//   }
+// }
+//
+// // // fix spacing
+// // .navbar-nav>li {
+// //   margin-bottom: 0;
+// // }
+//
+// // fix menu button for mobile
+// .navbar-toggle, .navbar-default .navbar-toggle:hover {
+//   border: none;
+//   background-color: #FFF;
+// }
+//
+// .navbar-img {
+//   height:45px;
+//   display:inline-block;
+//   float:left;
+//   margin:2px 8px 0 0
+// }
+//
+// .navbar-brand,.navbar-default,.navbar-nav>li>a {
+//   color:#FFF !important
+// }
