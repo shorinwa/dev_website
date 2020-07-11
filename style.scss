@@ -523,6 +523,7 @@ img.banner-img {
     margin-bottom: 2em;
     text-align: center;
     width: 70%;
+    background-color: E7E6E6;
 
     p {
       font-size: 1.25rem;
@@ -550,11 +551,70 @@ img.banner-img {
 }
 
 .news {
-    background-color: #F4F4F4;
+    background-color: #F9F6F0;
     h2 {
         text-align: center;
         color: black;
-        font-weight: 400;
+        font-weight: 500;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.9em;
     }
 }
-//
+
+@media (max-width: 767.98px) {
+    .news {
+        p {
+            font-size: 0.8em;
+        }
+    }
+}
+
+.follow{
+    background-color: #2F2423;
+    font-weight: 300;
+    h2 {
+        text-align: center;
+        color: white;
+        font-weight: 500;
+    }
+    a {
+        color: #d2c295
+    }
+}
+
+.footer{
+    background-color: #8c1515;
+    font-size: 0.7em;
+
+    a {
+        color: #d2c295
+    }
+}
+
+.icons {
+    font-size: 3em;
+    a {
+        color: white;
+    }
+    span.mail:before {
+        font-family: FontAwesome;
+        content:"\f0e0";
+    }
+    span.twitter:before {
+        font-family: FontAwesome;
+        content:"\f099";
+    }
+    span.github:before {
+        font-family: FontAwesome;
+        content:"\f09b";
+    }
+}
+
+@media (max-width: 767.98px) {
+    .icons {
+        font-size: 2em;
+    }
+}

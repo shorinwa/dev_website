@@ -4,9 +4,9 @@
     <div class="container mt-4">
         {% assign sorted = (site.news_items | sort: 'date') | reverse | slice: 0, 3%}
         {% for item in sorted %}
-            <div class="row">
+            <div class="row align-items-center my-2">
                 <div class="col-3 text-right text-black ml-auto">{{ item.date | date: "%B %d, %Y" }}:</div>
-                <div class="col-6 text-left text-black mr-auto">{{ item.content }}</div>
+                <div class="col-8 text-left text-black mr-auto">{{ item.content }}</div>
             </div>
         {% endfor %}
     </div>
