@@ -17,15 +17,15 @@ highlighter:        rouge
 # Navigation
 nav:
   - name:           "home"
-    href:           "/about"
+    href:           "/"
   - name:           "projects"
-    href:           "/projects"
+    href:           "/projects/"
   - name:           "publications"
-    href:           "/publications"
+    href:           "/publications/"
   - name:           "people"
-    href:           "/people"
+    href:           "/people/"
   - name:           "resources"
-    href:           "/resources"
+    href:           "/resources/"
 
 # Sass
 sass:
