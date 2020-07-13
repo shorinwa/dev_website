@@ -7,4 +7,4 @@ permalink: /publications/
 
 Read our publications to learn more about our research.
 
-{% bibliography --file papers %}
+{% bibliography %}

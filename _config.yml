@@ -11,6 +11,14 @@ permalink:          /:year/:month/:day/:title.html
 # Markdown
 markdown:           kramdown
 
+# scholar
+scholar:
+  # style: ieee
+  bibliography: "**/*.bib"
+  repository: "./papers"
+  bibliography_template: bibliography
+  bibtex_skip_fields: [doi]
+
 # Highlighter
 highlighter:        rouge
 
