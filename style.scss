@@ -519,16 +519,19 @@ img.banner-img {
 }
 
 .home-masthead{
-    margin-top: 2em;
-    margin-bottom: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
     text-align: center;
     width: 70%;
     background-color: E7E6E6;
+    z-index: 10;
+    position: relative;
 
     p {
       font-size: 1.25rem;
       font-weight: 300;
       font-style: italic;
+      margin: 0;
     }
 
     h1 {
@@ -551,7 +554,11 @@ img.banner-img {
 }
 
 .news {
-    background-color: #F9F6F0;
+    background-color: #F9F6EF;
+    z-index: 9;
+    position: relative;
+    padding-top: 3em;
+    padding-bottom: 3em;
     h2 {
         text-align: center;
         color: black;
@@ -560,7 +567,7 @@ img.banner-img {
 
     p {
         margin: 0;
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
 
@@ -574,7 +581,10 @@ img.banner-img {
 
 .follow{
     background-color: #2F2423;
-    font-weight: 300;
+    z-index: 8;
+    position: relative;
+    padding-top: 3em;
+    padding-bottom: 3em;
     h2 {
         text-align: center;
         color: white;
@@ -583,11 +593,17 @@ img.banner-img {
     a {
         color: #d2c295
     }
+    p {
+        font-size: 1em;
+        font-weight: 300;
+    }
 }
 
 .footer{
     background-color: #8c1515;
     font-size: 0.7em;
+    z-index: -1;
+    position: relative;
 
     a {
         color: #d2c295
@@ -627,6 +643,10 @@ img.banner-img {
 
 .footer-left-text {
   font-weight: 400;
+}
+
+.active {
+    font-weight: 400
 }
 
 // ol.bibliography li {
