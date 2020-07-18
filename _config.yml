@@ -60,6 +60,13 @@ defaults:
     values:
       layout:       "profile"
 
+  -
+    scope:
+      path:         ""
+      type:         "projects"
+    values:
+      layout:       "project-page"
+
 
 collections:
   people:
@@ -68,3 +75,7 @@ collections:
 
   news_items:
       output: false
+
+  projects:
+      output: true
+      permalink: /projects/:name

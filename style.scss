@@ -256,8 +256,7 @@ pre code {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
-  border-radius: 5px;
+  margin: 0;
 }
 
 table {
@@ -507,7 +506,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .page-title {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.6rem;
 }
 
 img.banner-img {
@@ -519,8 +518,8 @@ img.banner-img {
 }
 
 .home-masthead{
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     text-align: center;
     width: 70%;
     background-color: E7E6E6;
@@ -557,8 +556,8 @@ img.banner-img {
     background-color: #F9F6EF;
     z-index: 9;
     position: relative;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     h2 {
         text-align: center;
         color: black;
@@ -567,14 +566,14 @@ img.banner-img {
 
     p {
         margin: 0;
-        font-size: 1em;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 767.98px) {
     .news {
         p {
-            font-size: 0.8em;
+            font-size: 0.8rem;
         }
     }
 }
@@ -583,8 +582,8 @@ img.banner-img {
     background-color: #2F2423;
     z-index: 8;
     position: relative;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     h2 {
         text-align: center;
         color: white;
@@ -594,14 +593,14 @@ img.banner-img {
         color: #d2c295
     }
     p {
-        font-size: 1em;
+        font-size: 1rem;
         font-weight: 300;
     }
 }
 
 .footer{
     background-color: #8c1515;
-    font-size: 0.7em;
+    font-size: 0.7rem;
     z-index: -1;
     position: relative;
 
@@ -611,7 +610,7 @@ img.banner-img {
 }
 
 .icons {
-    font-size: 3em;
+    font-size: 2rem;
     a {
         color: white;
     }
@@ -631,7 +630,7 @@ img.banner-img {
 
 @media (max-width: 767.98px) {
     .icons {
-        font-size: 2em;
+        font-size: 2rem;
     }
 }
 
@@ -648,6 +647,51 @@ img.banner-img {
 .active {
     font-weight: 400
 }
+
+.project-masthead{
+    z-index: 9999;
+    h1 {
+       font-size: 2.5rem;
+       font-weight: 300;
+       margin: 0;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.5rem;
+    }
+}
+
+.project-container{
+    z-index: -1;
+    hr {
+        border-top: 0.05rem solid #ccc;
+        border-bottom: 0.05rem solid #ccc;
+    }
+}
+
+.project-card{
+    z-index: 9999;
+    max-width: 85%;
+    transition: box-shadow .3s;
+    img {
+        margin: 0;
+        max-height: 12rem;
+        vertical-align: middle;
+
+    }
+    p {
+        margin: 0;
+    }
+    h2{
+        margin: 0;
+    }
+}
+
+// this has a subtle bug...
+// .project-card:hover{
+//     box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.3) !important;
+// }
 
 // ol.bibliography li {
 //  list-style: none;

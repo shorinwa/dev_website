@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<div class="project-masthead container justify-content-left shadow">
+    <div class="row align-items-center justify-content-center mt-5 mb-5">
+        <div class="col-12 col-md-5 mx-auto px-auto">
+            <div class="row py-1 ml-3">
+                <div class="d-flex mx-auto mx-md-0">
+                    <h1><b>M</b>ulti-Robot</h1>
+                </div>
+            </div>
+            <div class="row py-1 ml-3">
+                <div class="mx-auto mx-md-0">
+                    <h1><b>S</b>ystems</h1>
+                </div>
+            </div>
+            <div class="row py-1 ml-3">
+                <div class="mx-auto mx-md-0">
+                    <h1><b>L</b>aboratory</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 col-md-5 mr-0 mr-md-5 mt-4 mt-md-0 text-justify">
+            {{ content }}
+        </div>
+    </div>
+</div>
+
+<div class="project-container container justify-content-center">
+    <div class="row justify-content-center mt-5 mb-1">
+        <div class="col-10 text-center">
+            <h2> Current Projects </h2>
+        </div>
+    </div>
+    <hr width="35%" class="mt-auto mb-4 d-none d-md-flex"></hr>
+    <hr width="65%" class="mt-auto mb-4 d-md-none"></hr>
+
+    {% for project in site.projects %}
+        {% assign rem = forloop.index | modulo: 2 %}
+            <div class="row project-card align-content-center justify-content-center shadow mx-auto my-3 py-4 px-4">
+                {% if rem == 1 %}
+                <div class="col-10 col-md-8 col-lg-4 mb-3 mb-lg-0 mx-auto align-middle">
+                    <img src="{{site.url}}/images/projects/{{project.image}}" class="mx-auto"/>
+                </div>
+                {% else %}
+                    <div class="col-10 col-md-8 col-lg-4 d-lg-none mb-3 mb-lg-0 mx-auto align-middle">
+                        <img src="{{site.url}}/images/projects/{{project.image}}" class="mx-auto"/>
+                    </div>
+                {% endif %}
+                <div class="col-md-10 col-lg-6 align-middle mx-auto my-auto">
+                    <div class="row justify-content-center text-center">
+                        <a href="{{site.url}}{{project.url}}">
+                            <h3> {{project.title}} </h3>
+                        </a>
+                    </div>
+
+                    <div class="row text-justify pt-3">
+                        <p> {{project.blurb}} </p>
+                    </div>
+                </div>
+                {% if rem == 0 %}
+                    <div class="col-lg-4 d-none d-lg-flex mb-3 mb-lg-0 mx-auto align-middle">
+                        <img src="{{site.url}}/images/projects/{{project.image}}"  class="mx-auto"/>
+                    </div>
+                {% endif %}
+            </div>
+
+    {% endfor %}
+</div>
