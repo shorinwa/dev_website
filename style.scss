@@ -530,6 +530,15 @@ tbody tr:nth-child(odd) th {
   color: #c42929;
 }
 
+.funding-img {
+  max-height: 200px;
+  max-width: 300px;
+  object-fit: cover;
+  object-position: center-top;
+  display: inline-block;
+  padding: 10px 25px 10px 25px
+}
+
 .page-title {
   margin-bottom: 0.6em;
 }
@@ -767,3 +776,33 @@ ol.bibliography li {
   padding-bottom: 0.18rem;
   margin-bottom: 0.3rem;
 }
+
+.resources-title {
+  border: 3px solid #9a9a9a;
+  border-radius: 13px;
+  background-color: #8c1515;
+  padding: 1.3rem 1.2rem 0.9rem 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.resources-title h2 {
+  color: white;
+  font-size: 1.9rem;
+}
+
+.resources-descrip {
+  margin: 0 1.2rem 2.7rem 1.2rem;
+}
+
+.resources-descrip-title {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0 0 0.3rem 0;
+}
+
+.resources-descrip-info {
+  margin: 0 0.6rem;
+  font-size: 0.87rem;
+}
+  

@@ -1,20 +1,9 @@
 ---
 title: Resources
 permalink: /resources/
+layout: resources
 ---
 
-## Inquiries
-For inquiries, reach us at
-
-Multi-Robot Systems Lab
-<br>
-Department of Aeronautics and Astronautics
-<br>
-496 Lomita Mall
-<br>
-Stanford, CA 94305
-
-## Funding
 Our research is funded in part from these sources:
 
 ![nsf]({{site.url}}/images/funding/nsf.png){:class="funding-img"}
