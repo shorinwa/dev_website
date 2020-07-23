@@ -5,7 +5,7 @@ description:        "Solving robotics problems through multi-robot approaches."
 
 # URL
 url:                http://127.0.0.1:4000
-baseurl:
+baseurl:            
 permalink:          /:year/:month/:day/:title.html
 
 # Markdown
@@ -18,6 +18,8 @@ scholar:
   repository: "./papers"
   bibliography_template: bibliography
   bibtex_skip_fields: [doi]
+  sort_by: year
+  order: descending
 
 # Highlighter
 highlighter:        rouge
@@ -25,15 +27,15 @@ highlighter:        rouge
 # Navigation
 nav:
   - name:           "home"
-    href:           "/"
+    href:           "/about"
   - name:           "projects"
-    href:           "/projects/"
+    href:           "/projects"
   - name:           "publications"
-    href:           "/publications/"
+    href:           "/publications"
   - name:           "people"
-    href:           "/people/"
+    href:           "/people"
   - name:           "resources"
-    href:           "/resources/"
+    href:           "/resources"
 
 # Sass
 sass:
@@ -60,11 +62,14 @@ defaults:
     values:
       layout:       "profile"
 
-
 collections:
+  publication_tags:
+     output: true
+     permalink: /publications/:title/index.html
+
   people:
-    output: true
-    permalink: /people/:title/index.html
+     output: true
+     permalink: /people/:title/index.html
 
   news_items:
-      output: false
+      output: false  
