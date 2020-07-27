@@ -5,6 +5,7 @@ focus: Robotics Simulation
 hours: 1000 - 1800
 location: Durand 028
 email: akoufos@stanford.edu
+projects:
 avatar: alexkoufos.jpg
 permalink: /alexkoufos/
 ---

@@ -2,28 +2,43 @@
 layout: default
 ---
 <link href="{{ site.url }}/css/profile.css" rel="stylesheet">
-<div class="container justify-content-center mx-auto">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-sm-4">
       <img 
-        class="mx-auto d-block mb-2 float-md-left mr-md-4 img-fluid"
+        class="mx-auto d-block img-fluid"
         src="{{site.url}}/images/people/{{page.avatar}}"
         alt="{{page.name}}"
-        style="max-width: 500px"
+        style="max-width: 400px"
       >
     </div>
-    <div class="col-md-7">
+    <div class="col-sm-8">
       <h2 class="page-title">{{ page.name }}</h2>
-      <p class="profile contact"><strong>Position: </strong>{{page.position}}</p>
-      <p class="profile contact"><strong>Focus: </strong>{{page.focus}}</p class=".profile.contact">
+      <p class="profile contact"><strong>Position: </strong>
+        {% if page.position == "researchengineer" %}
+            Research Engineer
+        {% else if page.position == "gradstudent" %}
+            Graduate Student
+        {% else if page.position == "pi" %}
+            Principal Investigator
+        {% endif %}
+      </p>
+      {% if page.focus %}
+        <p class="profile contact"><strong>Focus: </strong>{{page.focus}}</p class=".profile.contact">
+      {% endif %}
       <p><h3>Bio:</h3>{{content}}</p>
-      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
       <h3>Contact Info:</h3>
-      <p class="profile contact"><strong>Email: </strong>{{page.email}}</p> 
-      <p class="profile contact"><strong>Office: </strong>{{page.location}}</p>
+      <p class="profile contact"><strong>Email: </strong>{{page.email}}</p>
+      {% if page.location %}
+        <p class="profile contact"><strong>Office: </strong>{{page.location}}</p>
+      {% endif %}
       {% if page.hours %}
         <p><strong>Office Hours: </strong>{{page.hours}}</p>
       {% endif %}
     </div>
-  </div>
+
 </div>

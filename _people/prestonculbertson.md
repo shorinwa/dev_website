@@ -2,8 +2,10 @@
 name: Preston Culbertson
 position: gradstudent
 focus:
+hours:
 location: Durand 028
 email: pculbertson@stanford.edu
+projects:
 avatar: prestonculbertson.jpg
 permalink: /prestonculbertson/
 ---
