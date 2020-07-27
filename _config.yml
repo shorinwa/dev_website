@@ -18,6 +18,8 @@ scholar:
   repository: "./papers"
   bibliography_template: bibliography
   bibtex_skip_fields: [doi]
+  sort_by: year
+  order: descending
 
 # Highlighter
 highlighter:        rouge
@@ -60,8 +62,14 @@ defaults:
     values:
       layout:       "profile"
 
-
 collections:
+  publication_tags:
+     output: true
+     permalink: /publications/:title/index.html
+
   people:
-    output: true
-    permalink: /people/:title/index.html
+     output: true
+     permalink: /people/:title/index.html
+
+  news_items:
+      output: false  
