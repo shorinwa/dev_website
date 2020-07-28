@@ -1,6 +1,6 @@
 ---
 name: Alex Koufos
-position: researchengineer
+position: Research Engineer
 avatar: alexkoufos.jpg
 permalink: /alexkoufos/
 ---

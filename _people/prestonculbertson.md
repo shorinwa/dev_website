@@ -1,6 +1,6 @@
 ---
 name: Preston Culbertson
-position: gradstudent
+position: PhD Candidate
 avatar: prestonculbertson.jpg
 permalink: /prestonculbertson/
 ---
