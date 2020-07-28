@@ -295,6 +295,30 @@ tbody tr:nth-child(odd) th {
   }
 }
 
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
+
 .masthead {
 
   &-title {
@@ -506,87 +530,6 @@ tbody tr:nth-child(odd) th {
   color: #c42929;
 }
 
-.page-title {
-  margin-bottom: 0.6em;
-}
-
-.navbar-brand {
-  //font-weight: bold;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-// change font for navbar
-.navbar, .navbar-nav>li>a {
-  background-color: #8c1515;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 80%;
-}
-
-// fix menu bar spacing for mobile
-@media(max-width: 40em){
-  .navbar-nav>li>a {
-    padding: 0.75em 0 0.5em 2.5em;
-    font-size: 15px;
-  }
-
-  // fix menu scroll along x axis
-  .navbar-nav {
-    margin-right: 15px;
-  }
-}
-
-// fix spacing
-.navbar-nav>li {
-  margin-bottom: 0;
-}
-
-// fix menu button for mobile
-.navbar-toggle, .navbar-default .navbar-toggle:hover {
-  border: none;
-  background-color: #FFF;
-}
-
-.navbar-img {
-  height:45px;
-  display:inline-block;
-  float:left;
-  margin:2px 8px 0 0;
-}
-
-.navbar-brand,.navbar-default,.navbar-nav>li>a {
-  color:#FFF !important;
-}
-
-.footer {
-  padding: 10px 55px 10px 55px;
-  background-color: #F3F3F3;
-  width: 100%;
-}
-
-.footer-left, .footer-right {
-  display: inline-block;
-  width: 48%;
-  height: 65px;
-  color: black;
-  font-size: 18px;
-  font-weight: 200;
-  padding: 0 0 0 0px;
-}
-
-.footer-left {
-  padding-top: 5px;
-}
-
-.footer-right {
-  text-align: right;
-  float: right;
-  padding-top: 0px;
-  overflow: hidden;
-}
-
 .funding-img {
   max-height: 200px;
   max-width: 300px;
@@ -596,20 +539,270 @@ tbody tr:nth-child(odd) th {
   padding: 10px 25px 10px 25px
 }
 
-.footer-left-img, .footer-right-img {
-  max-width: 300px;
-  display: inline-block;
-  padding: 0 10px 0 10px;
+.page-title {
+  margin-bottom: 0.6em;
 }
 
-.footer-left-img {
-  max-height: 55px;
+img.banner-img {
+    max-width: 100%;
+    height: auto;
+    min-height: 150px;
+    border-radius: 0px;
+    margin: 0px;
 }
 
-.footer-right-img {
-  max-height: 80px;
+.home-masthead{
+    padding-top: 3em;
+    padding-bottom: 3em;
+    text-align: center;
+    width: 70%;
+    background-color: E7E6E6;
+    z-index: 10;
+    position: relative;
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 300;
+      font-style: italic;
+      margin: 0;
+    }
+
+    h1 {
+       font-size: 3.5rem;
+       font-weight: 300;
+    }
+
+}
+
+// fix weird masthead text wrap on mobile sizes
+@media (max-width: 767.98px) {
+    .home-masthead{
+        h1 {
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+
+.news {
+    background-color: #F9F6EF;
+    z-index: 9;
+    position: relative;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    h2 {
+        text-align: center;
+        color: black;
+        font-weight: 500;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .news {
+        p {
+            font-size: 0.8em;
+        }
+    }
+}
+
+.follow{
+    background-color: #2F2423;
+    z-index: 8;
+    position: relative;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    h2 {
+        text-align: center;
+        color: white;
+        font-weight: 500;
+    }
+    a {
+        color: #d2c295
+    }
+    p {
+        font-size: 1em;
+        font-weight: 300;
+    }
+}
+
+.footer{
+    background-color: #8c1515;
+    font-size: 0.7em;
+    z-index: -1;
+    position: relative;
+
+    a {
+        color: #d2c295
+    }
+}
+
+.icons {
+    font-size: 3em;
+    a {
+        color: white;
+    }
+    span.mail:before {
+        font-family: FontAwesome;
+        content:"\f0e0";
+    }
+    span.twitter:before {
+        font-family: FontAwesome;
+        content:"\f099";
+    }
+    span.github:before {
+        font-family: FontAwesome;
+        content:"\f09b";
+    }
+}
+
+@media (max-width: 767.98px) {
+    .icons {
+        font-size: 2em;
+    }
+}
+
+.navbar{
+    ul {
+        font-size: 1rem;
+    }
 }
 
 .footer-left-text {
   font-weight: 400;
 }
+
+.active {
+    font-weight: 400
+}
+
+.nav-tabs {
+  display: block;
+}
+
+.nav-tabs>li {
+  display: inline-block;
+}
+
+.publication-head {
+  border: 0;
+  border-top: 0.6px solid #969696;
+  border-bottom: 0.6px solid #969696;
+  margin: 0 0 0 0;
+}
+
+.publication-head-content {
+  padding: 0.47rem 0 0.47rem 0.6rem;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  border: 2px solid #c2c2c2;
+  word-spacing: 0.013rem;
+}
+
+.publication-head-content h3 {
+  margin: 0;
+}
+
+.publication-title {
+  border-left: 3px solid #9a9a9a;
+  border-right: 3px solid #9a9a9a;
+  border-bottom: 3px solid #9a9a9a;
+  border-radius: 0 0 13px 13px;
+  background-color: #8c1515;
+  padding: 1.97rem 1.2rem 0.9rem 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.publication-title h2 {
+  color: white;
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.publication-content {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+
+.publication-descrip {
+  padding-left: 0;
+}
+
+ol.bibliography {
+  padding: 0.9rem 0.9rem 2rem 0.9rem;
+  margin: 0;
+}
+
+.publication-nav {
+  margin-bottom: 1rem;
+  min-height: 2.1rem;
+}
+
+.publication-nav span {
+  font-weight: 500;
+  font-size: 0.9rem;
+  float: left;
+  padding: 11px 0px 4px 12px;
+  margin-right: 1.8rem;
+}
+
+@media (max-width:40em) {
+  .publication-nav span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: block;
+    width: 100%;
+    padding: 10px 0px 4px 12px;
+    margin-bottom: 0.46rem;
+    margin-right: 0;
+  }
+}
+
+.publication-nav a {
+  color: #737373;
+  font-size: 0.87rem;
+  font-weight: 400;
+}
+
+
+ol.bibliography li {
+  padding-top: 0.18rem;
+  padding-bottom: 0.18rem;
+  margin-bottom: 0.3rem;
+}
+
+.resources-title {
+  border: 3px solid #9a9a9a;
+  border-radius: 13px;
+  background-color: #8c1515;
+  padding: 1.3rem 1.2rem 0.9rem 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.resources-title h2 {
+  color: white;
+  font-size: 1.9rem;
+}
+
+.resources-descrip {
+  margin: 0 1.2rem 2.7rem 1.2rem;
+}
+
+.resources-descrip-title {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0 0 0.3rem 0;
+}
+
+.resources-descrip-info {
+  margin: 0 0.6rem;
+  font-size: 0.87rem;
+}
+  
