@@ -1,17 +1,13 @@
 ---
 name: JunEn Low
-position: Graduate Student
+position: gradstudent
+focus:
+hours:
+location: Durand 028
+email:
+projects:
 avatar: junenlow.jpg
 permalink: /junenlow/
 ---
 
-<img width="300" src="{{site.url}}/images/people/{{page.avatar}}" data-action="zoom">
-
-### Happy to talk
-Email: email@stanford.edu
-<br>
-Office: Durand 028
-
-
-### Bio
 Insert bio here

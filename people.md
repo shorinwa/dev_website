@@ -29,12 +29,17 @@ permalink: /people/
 -->
 </div>
 
+
+
+
+<br>
 <h3>Principal Investigator</h3>
 <div class="list-item-people">
         <p class="list-post-title">
 		<a href="https://web.stanford.edu/~schwager/">
-		<img class="profile-thumbnail" src="{{site.url}}/images/people/macschwager.jpg"></a>
+		<img class="pi-thumbnail" src="{{site.url}}/images/people/macschwager.jpg"></a>
 		<a class="name" href="https://web.stanford.edu/~schwager/"><b>Mac Schwager</b></a>
+		<p> Assistant Professor </p>
 		</p>
 </div>
 
@@ -55,7 +60,7 @@ permalink: /people/
 
 <div class="content list people">
   {% for person in all_people %}
-	{% if person.position == 'Research Engineer' %}
+	{% if person.position == 'researchengineer' %}
     
       <div class="list-item-people">
         <p class="list-post-title">
@@ -66,8 +71,8 @@ permalink: /people/
            <a class="name" href="{{site.url}}{{person.url}}"><b>{{person.name}}</b></a>
 		   
         </p>
-		<p> {{person.position}} <hr> </p>
-		<p style="width: 200px;"> {{person.description}} </p>
+		<p> Research Engineer <hr> </p>
+		<p style="width: 200px;"> {{person.focus}} </p>
       </div>
 	  
 	{% endif %}
@@ -76,7 +81,7 @@ permalink: /people/
   
   
   {% for person in all_people %}
-	{% if person.position == 'Postdoctoral Scholar' %}
+	{% if person.position == 'postdoc' %}
     
       <div class="list-item-people">
         <p class="list-post-title">
@@ -87,8 +92,8 @@ permalink: /people/
            <a class="name" href="{{site.url}}{{person.url}}"><b>{{person.name}}</b></a>
 		   
         </p>
-		<p> {{person.position}} <hr> </p>
-		<p style="width: 200px;"> {{person.description}} </p>
+		<p> Postdoctoral Scholar <hr> </p>
+		<p style="width: 200px;"> {{person.focus}} </p>
       </div>
 	  
 	{% endif %}
@@ -97,7 +102,7 @@ permalink: /people/
   
   
   {% for person in all_people %}
-	{% if person.position == 'PhD Candidate' %}
+	{% if person.position == 'phd' %}
     
       <div class="list-item-people">
         <p class="list-post-title">
@@ -108,8 +113,8 @@ permalink: /people/
            <a class="name" href="{{site.url}}{{person.url}}"><b>{{person.name}}</b></a>
 		   
         </p>
-		<p> {{person.position}} <hr> </p>
-		<p style="width: 200px;"> {{person.description}} </p>
+		<p> PhD Candidate <hr> </p>
+		<p style="width: 200px;"> {{person.focus}} </p>
       </div>
 	  
 	{% endif %}
@@ -118,7 +123,7 @@ permalink: /people/
   
   
   {% for person in all_people %}
-	{% if person.position == 'Graduate Student' %}
+	{% if person.position == 'gradstudent' %}
     
       <div class="list-item-people">
         <p class="list-post-title">
@@ -129,8 +134,8 @@ permalink: /people/
            <a class="name" href="{{site.url}}{{person.url}}"><b>{{person.name}}</b></a>
 		   
         </p>
-		<p> {{person.position}} <hr> </p>
-		<p style="width: 200px;"> {{person.description}} </p>
+		<p> Graduate Student <hr> </p>
+		<p style="width: 200px;"> {{person.focus}} </p>
       </div>
 	  
 	{% endif %}
