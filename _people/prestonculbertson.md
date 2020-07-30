@@ -4,7 +4,7 @@ position: phd
 focus:
 hours:
 location: Durand 028
-email:
+email: pculbertson@stanford.edu
 projects:
 avatar: prestonculbertson.jpg
 permalink: /prestonculbertson/
