@@ -17,13 +17,17 @@ layout: default
       <p class="profile contact"><strong>Position: </strong>
         {% if page.position == "researchengineer" %}
             Research Engineer
-		{% else if page.position == "postdoc" %}
-            Postdoctoral Scholar
-		{% else if page.position == "phd" %}
-            PhD Candidate
-        {% else if page.position == "gradstudent" %}
+		{% endif %}
+		{% if page.position == "gradstudent" %}
             Graduate Student
-        {% else if page.position == "pi" %}
+		{% endif %}
+		{% if page.position == "postdoc" %}
+            Postdoctoral Scholar
+		{% endif %}
+		{% if page.position == "phd" %}
+            PhD Candidate
+		{% endif %}
+        {% if page.position == "pi" %}
             Principal Investigator
         {% endif %}
       </p>
