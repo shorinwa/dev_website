@@ -15,21 +15,24 @@ layout: default
     <div class="col-sm-8">
       <h2 class="page-title">{{ page.name }}</h2>
       <p class="profile contact"><strong>Position: </strong>
-        {% if page.position == "researchengineer" %}
-            Research Engineer
-		{% endif %}
-		{% if page.position == "gradstudent" %}
+      {% case page.position %}
+        {% when "researchengineer" %}
+          Research Engineer
+        {% when "gradstudent" %}
             Graduate Student
-		{% endif %}
-		{% if page.position == "postdoc" %}
-            Postdoctoral Scholar
-		{% endif %}
-		{% if page.position == "phd" %}
-            PhD Candidate
-		{% endif %}
-        {% if page.position == "pi" %}
-            Principal Investigator
-        {% endif %}
+        {% when "postdoc" %}
+          Postdoctoral Scholar
+        {% when "phd" %}
+          PhD Candidate
+        {% when "pi" %}
+          Principal Investigator
+        {% when "undergrad" %}
+          Undergraduate Student
+        {% when "affiliate" %}
+          Lab Affiliate
+        {% else %}
+          ---
+      {% endcase %}
       </p>
       {% if page.focus %}
         <p class="profile contact"><strong>Focus: </strong>{{page.focus}}</p class=".profile.contact">
