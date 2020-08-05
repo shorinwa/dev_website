@@ -14,28 +14,36 @@ layout: default
     </div>
     <div class="col-sm-8">
       <h2 class="page-title">{{ page.name }}</h2>
+      {% if page.degree %}
+        <h5 class="degree">{{page.degree}}</h5>
+      {% endif %}
       <p class="profile contact"><strong>Position: </strong>
-      {% case page.position %}
-        {% when "researchengineer" %}
-          Research Engineer
-        {% when "gradstudent" %}
-            Graduate Student
-        {% when "postdoc" %}
-          Postdoctoral Scholar
-        {% when "phd" %}
-          PhD Candidate
-        {% when "pi" %}
-          Principal Investigator
-        {% when "undergrad" %}
-          Undergraduate Student
-        {% when "affiliate" %}
-          Lab Affiliate
-        {% else %}
-          ---
-      {% endcase %}
+        {% case page.position %}
+          {% when "researchengineer" %}
+            Research Engineer
+          {% when "gradstudent" %}
+              Graduate Student
+          {% when "postdoc" %}
+            Postdoctoral Scholar
+          {% when "phd" %}
+            PhD Candidate
+          {% when "pi" %}
+            Principal Investigator
+          {% when "undergrad" %}
+            Undergraduate Student
+          {% when "affiliate" %}
+            Lab Affiliate
+          {% else %}
+            ---
+        {% endcase %}
       </p>
       {% if page.focus %}
-        <p class="profile contact"><strong>Focus: </strong>{{page.focus}}</p class=".profile.contact">
+        <p class="profile contact"><strong>Focus: </strong>{{page.focus}}</p>
+      {% endif %}
+      {% if page.projects %}
+        <p class="profile contact"><strong>Projects: </strong>
+          {{page.projects}}
+        </p>
       {% endif %}
       <p><h3>Bio:</h3>{{content}}</p>
     </div>
@@ -45,10 +53,19 @@ layout: default
       <h3>Contact Info:</h3>
       <p class="profile contact"><strong>Email: </strong>{{page.email}}</p>
       {% if page.location %}
-        <p class="profile contact"><strong>Office: </strong>{{page.location}}</p>
+        <p class="profile contact"><strong>Office: </strong>
+          {{page.location}}
+        </p>
       {% endif %}
       {% if page.hours %}
-        <p><strong>Office Hours: </strong>{{page.hours}}</p>
+        <p class="profile contact"><strong>Office Hours: </strong>
+          {{page.hours}}
+        </p>
+      {% endif %}
+      {% if page.website %}
+        <p class="profile contact"><strong>Personal Website: </strong>
+          <a href={{page.website}}>{{page.name}}</a>
+        </p>
       {% endif %}
     </div>
 
