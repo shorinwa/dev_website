@@ -1,5 +1,6 @@
 ---
 name: Alex Koufos
+degree: PhD, Computational Physics - George Mason University
 position: researchengineer
 focus: Robotics Simulation
 hours: 1000 - 1800
