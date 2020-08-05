@@ -1,13 +1,14 @@
 ---
 name: Preston Culbertson
 position: phd
-focus:
+focus: Collborative manipulation and grasping
 hours:
 location: Durand 028
 email: pculbertson@stanford.edu
 projects:
 avatar: prestonculbertson.jpg
 permalink: /prestonculbertson/
+website: https://pculbertson.github.io
 ---
 
 Preston Culbertson is currently pursuing a PhD in Mechanical Engineering at Stanford University.  He received a BS in Mechanical Engineering in 2016 from the Georgia Institute of Technology
