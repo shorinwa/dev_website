@@ -8,6 +8,7 @@ email:
 projects:
 avatar: trevorhalsted.jpg
 permalink: /trevorhalsted/
+title: Trevor Halsted
 ---
 
 Insert bio here

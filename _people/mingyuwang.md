@@ -8,6 +8,7 @@ email:
 projects:
 avatar: mingyuwang.jpg
 permalink: /mingyuwang/
+title: Mingyu Wang 
 ---
 
 Insert bio here

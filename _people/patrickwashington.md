@@ -8,6 +8,7 @@ email:
 projects:
 avatar: patrickwashington.jpg
 permalink: /patrickwashington/
+title: Patrick Washington
 ---
 
 Insert bio here

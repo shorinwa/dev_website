@@ -8,6 +8,7 @@ email:
 projects:
 avatar: ravihaksar.png
 permalink: /ravihaksar/
+title: Ravi Haksar
 ---
 
 Insert bio here

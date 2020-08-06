@@ -8,6 +8,7 @@ email: pculbertson@stanford.edu
 projects:
 avatar: prestonculbertson.jpg
 permalink: /prestonculbertson/
+title: Preston Culbertson
 website: https://pculbertson.github.io
 ---
 

@@ -8,6 +8,7 @@ email:
 projects:
 avatar: kunalshah.jpg
 permalink: /kunalshah/
+title: Kunal Shah
 ---
 
 Insert bio here
