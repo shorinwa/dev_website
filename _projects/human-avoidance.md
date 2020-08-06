@@ -1,6 +1,6 @@
 ---
 title: Risk-Sensitive Optimal Control with Data-Driven Human Trajectory Forecasting for Safe Crowd-Robot Interaction
-image: human_avoidance.png
+image: human-avoidance.png
 blurb: "We combine risk-sensitive optimal control tools with deep generative modeling to enable robotic crowd navigation, and observe diverse interaction behavior by varying the robot's risk sensitivity."
 banner: /images/projects/msl_herd-4.jpg
 ---

@@ -18,7 +18,7 @@
             </a>
         </li>
       {% for nav in site.nav %}
-        {% if page.permalink == nav.href %}
+        {% if page.url contains nav.href %}
             <!-- current page is active; set nav class -->
             <li class="nav-item my-0">
                 <a class='nav-link active py-0' href="{{ nav.href }}">{{ nav.name }}</a>

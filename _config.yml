@@ -27,7 +27,7 @@ highlighter:        rouge
 # Navigation
 nav:
   - name:           "home"
-    href:           "/about"
+    href:           "/index"
   - name:           "projects"
     href:           "/projects"
   - name:           "publications"
@@ -84,4 +84,3 @@ collections:
 
   projects:
       output: true
-      permalink: /projects/:name

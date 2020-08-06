@@ -1,6 +1,9 @@
 ---
 ---
-
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
+@import "scss/regular.scss";
+@import "scss/brands.scss";
 
 * {
   -webkit-box-sizing: border-box;
@@ -627,6 +630,32 @@ img.banner-img {
     }
 }
 
+.research-panel {
+    background-color: #f4f4f4;
+    z-index: 9;
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    h2 {
+        text-align: center;
+        color: black;
+        font-weight: 500;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .news {
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}
+
 .follow{
     background-color: #2F2423;
     z-index: 8;
@@ -662,18 +691,6 @@ img.banner-img {
     font-size: 2rem;
     a {
         color: white;
-    }
-    span.mail:before {
-        font-family: FontAwesome;
-        content:"\f0e0";
-    }
-    span.twitter:before {
-        font-family: FontAwesome;
-        content:"\f099";
-    }
-    span.github:before {
-        font-family: FontAwesome;
-        content:"\f09b";
     }
 }
 
