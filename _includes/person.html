@@ -1,0 +1,20 @@
+<div class="list-item-people">
+    <p class="list-post-title">
+        {% if person.avatar %}
+        <a href="{{site.url}}{{person.url}}">
+            <img
+            class="profile-thumbnail"
+            src="{{site.url}}/images/people/{{person.avatar}}">
+        </a>
+        {% else %}
+        <img
+            class="profile-thumbnail"
+            src="{{site.url}}/images/stanford_tree.png>
+        {% endif %}
+        <a class="name" href="{{site.url}}{{person.url}}">
+        <b>{{person.name}}</b>
+        </a>
+    </p>
+    <p>{% include position_text.html position=include.position %}<hr></p>
+    <p style="width: 200px;"> {{person.focus}} </p>
+</div>

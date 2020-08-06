@@ -18,24 +18,7 @@ layout: default
         <h5 class="degree">{{page.degree}}</h5>
       {% endif %}
       <p class="profile contact"><strong>Position: </strong>
-        {% case page.position %}
-          {% when "researchengineer" %}
-            Research Engineer
-          {% when "gradstudent" %}
-              Graduate Student
-          {% when "postdoc" %}
-            Postdoctoral Scholar
-          {% when "phd" %}
-            PhD Candidate
-          {% when "pi" %}
-            Principal Investigator
-          {% when "undergrad" %}
-            Undergraduate Student
-          {% when "affiliate" %}
-            Lab Affiliate
-          {% else %}
-            ---
-        {% endcase %}
+        {% include position_text.html position=page.position %}
       </p>
       {% if page.focus %}
         <p class="profile contact"><strong>Focus: </strong>{{page.focus}}</p>
