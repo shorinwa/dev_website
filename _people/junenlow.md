@@ -8,6 +8,7 @@ email:
 projects:
 avatar: junenlow.jpg
 permalink: /junenlow/
+title: JunEn Low
 ---
 
 Insert bio here

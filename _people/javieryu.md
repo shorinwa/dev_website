@@ -8,6 +8,7 @@ email:
 projects:
 avatar: javieryu.jpg
 permalink: /javieryu/
+title: Javier Yu
 ---
 
 Insert bio here

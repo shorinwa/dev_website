@@ -8,6 +8,7 @@ email:
 projects:
 avatar: simonlecleach.jpg
 permalink: /simonleclech/
+title: Simon Le Cleac'h
 ---
 
 Insert bio here

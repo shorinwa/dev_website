@@ -8,6 +8,7 @@ email:
 projects:
 avatar: keikonagami.jpg
 permalink: /keikonagami/
+title: Keiko Nagami
 ---
 
 Insert bio here

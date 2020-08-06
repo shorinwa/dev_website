@@ -9,6 +9,7 @@ email: someone@web.com
 projects: Project 1, Project 2, etc.
 avatar: stanford_tree.png
 permalink: /profile_template/
+title: same as name
 website: https://www.google.com
 ---
 
