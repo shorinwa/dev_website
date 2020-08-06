@@ -1,11 +1,23 @@
 <div class="news text-black justify-content-center py-5 shadow">
     <h2> <span text-align="center"><i class="far fa-newspaper pr-2" display="inline"></i> Recent News </span> </h2>
 
+    <hr width="30%" class="mt-auto mb-4 d-none d-md-flex"></hr>
+    <hr width="40%" class="mt-auto mb-4 d-md-none"></hr>
+
     <div class="container mt-4">
         {% assign sorted = (site.news_items | sort: 'date') | reverse | slice: 0, 3%}
         {% for item in sorted %}
             <div class="row align-items-center py-3">
-                <div class="col-3 text-right text-black ml-auto">{{ item.date | date: "%B %d, %Y" }}:</div>
+                <div class="col-3 text-right text-black ml-auto">
+                    {% if item.type == "award" %}
+                        <i class="fas fa-award pr-2" display="inline"></i>
+                    {% elsif item.type== "defense" %}
+                        <i class="fas fa-graduation-cap pr-2" display="inline"></i>
+                    {% else %}
+                        <i class="fas fa-newspaper pr-2" display="inline"></i>
+                    {% endif %}
+                    {{ item.date | date: "%B %d, %Y" }}:
+                </div>
                 <div class="col-8 text-left text-black mr-auto">{{ item.content }}</div>
             </div>
         {% endfor %}

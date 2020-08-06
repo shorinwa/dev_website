@@ -1,5 +1,17 @@
 <div class="research-panel text-black justify-content-center py-5 shadow">
-    <h2> <span text-align="center"><i class="fas fa-robot pr-2" display="inline"></i> Research </span> </h2>
+    <h2 class="py-2"> <span text-align="center"><i class="fas fa-robot pr-2" display="inline"></i> Research </span> </h2>
 
-    <p> Projects Projects Projects </p>
+        <hr width="30%" class="mt-auto mb-4 d-none d-md-flex"></hr>
+        <hr width="40%" class="mt-auto mb-4 d-md-none"></hr>
+
+    <div class="row justify-content-center">
+        {% for project in site.projects %}
+            <div class="col-8 col-md-4 project-tile px-0 mx-2 my-2 justify-content-center">
+                <img class="project-tile" src="images/projects/{{project.image}}" />
+                <div class="project-tile title align-middle">
+                    <a class="my-auto" href="{{site.url}}{{project.url}}"><h3 class="my-auto"> {{project.title}}</h3> </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>

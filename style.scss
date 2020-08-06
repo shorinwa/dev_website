@@ -41,7 +41,7 @@ body {
 }
 
 a {
-  color: #268bd2;
+  color: #ccc;
   text-decoration: none;
 
   &:hover,
@@ -545,7 +545,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .list-item a:hover, .list-post-title:hover .name, .list-post-title .name:hover {
-  color: #c42929;
+  color: #ccc;
 }
 
 .funding-img {
@@ -620,6 +620,10 @@ img.banner-img {
         margin: 0;
         font-size: 1rem;
     }
+    hr {
+        border-top: 0.05rem solid #ccc;
+        border-bottom: 0.05rem solid #ccc;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -632,7 +636,7 @@ img.banner-img {
 
 .research-panel {
     background-color: #f4f4f4;
-    z-index: 9;
+    z-index: 8;
     position: relative;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -646,6 +650,57 @@ img.banner-img {
         margin: 0;
         font-size: 1rem;
     }
+
+    hr {
+        border-top: 0.05rem solid #ccc;
+        border-bottom: 0.05rem solid #ccc;
+    }
+
+}
+
+.project-tile {
+    transition: box-shadow .6s, opacity 0.6s;
+    position: relative;
+    img {
+        object-fit: cover;
+        overflow: hidden;
+        height: 20vw;
+        width: 30vw;
+        z-index: 1;
+    }
+
+    @media (max-width: 767.98px) {
+        img {
+            height: 60vw;
+            width: 90vw;
+        }
+    }
+
+    .title {
+        // display: none;
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+        text-align: center;
+        background-color: #000000bb;
+        opacity: 0;
+        h3 {
+            color: #fff;
+        }
+    }
+
+}
+
+.project-tile:hover{
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.3) !important;
+    .title {
+        // display: flex;
+        opacity: 1;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -658,7 +713,7 @@ img.banner-img {
 
 .follow{
     background-color: #2F2423;
-    z-index: 8;
+    z-index: 7;
     position: relative;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -683,7 +738,7 @@ img.banner-img {
     align-items: flex-end;
 
     a {
-        color: #d2c295
+        color: #d2c295;
     }
 }
 
@@ -742,6 +797,7 @@ img.banner-img {
     max-width: 85%;
     transition: box-shadow .3s;
     background-color: #fff;
+
     img {
         margin: 0;
         max-height: 12rem;
@@ -756,7 +812,6 @@ img.banner-img {
     }
 }
 
-// this has a subtle bug...
 .project-card:hover{
     box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.3) !important;
 }
