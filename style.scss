@@ -726,9 +726,6 @@ img.banner-img {
 }
 
 .publication-title {
-  border-left: 3px solid #9a9a9a;
-  border-right: 3px solid #9a9a9a;
-  border-bottom: 3px solid #9a9a9a;
   border-radius: 0 0 13px 13px;
   background-color: #8c1515;
   padding: 1.97rem 1.2rem 0.9rem 1.2rem;
@@ -794,7 +791,6 @@ ol.bibliography li {
 }
 
 .resources-title {
-  border: 3px solid #9a9a9a;
   border-radius: 13px;
   background-color: #8c1515;
   padding: 1.3rem 1.2rem 0.9rem 1.2rem;
@@ -823,13 +819,13 @@ ol.bibliography li {
 }
   
 .people-title {
-  background-color: #f4f4f4;
-  border: 2px solid #9c9c9c;
+  background-color: #8c1515;
   border-radius: 12px;
-  padding: 0.8rem;
+  padding: 0.97rem;
   margin-top: 0.73rem;
 }
 
 .people-title h3 {
   margin: 0;
+  color: white;
 }

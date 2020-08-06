@@ -70,7 +70,7 @@ permalink: /people/
     {% for person in all_people %}
       {% if person.position == 'affiliate' %}
         {% include person.html position=person.position %}
-      {% endif %} 
+      {% endif %}
     {% endfor %}
 
   </div>
