@@ -33,9 +33,6 @@ permalink: /people/
   <br>
   <h3>Research Team</h3>
 
-  <style> p{margin:0; padding:0;} </style>
-  <style> hr{margin:0; padding:0;} </style>
-
   <div class="content list people">
 
     {% for person in all_people %}
