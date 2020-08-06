@@ -294,6 +294,30 @@ tbody tr:nth-child(odd) th {
   }
 }
 
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
+
 .masthead {
 
   &-title {
@@ -405,6 +429,13 @@ tbody tr:nth-child(odd) th {
   height: 200px;
 }
 
+.pi-thumbnail {
+  object-fit: cover;
+  object-position: center top;
+  width: 300px;
+  height: 300px;
+}
+
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
@@ -480,7 +511,9 @@ tbody tr:nth-child(odd) th {
 
 .list-item-people {
   display: inline-block;
-  padding-right: 1em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  vertical-align: top;
 }
 
 .list-post-title img {
@@ -496,6 +529,13 @@ tbody tr:nth-child(odd) th {
   color: black;
 }
 
+.list-post-extra {
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  max-width: 200px;
+}
+
 .list-detail {
   font-size: 15px;
   color: #838383;
@@ -503,6 +543,15 @@ tbody tr:nth-child(odd) th {
 
 .list-item a:hover, .list-post-title:hover .name, .list-post-title .name:hover {
   color: #c42929;
+}
+
+.funding-img {
+  max-height: 200px;
+  max-width: 300px;
+  object-fit: cover;
+  object-position: center-top;
+  display: inline-block;
+  padding: 10px 25px 10px 25px
 }
 
 .page-title {
@@ -708,6 +757,138 @@ img.banner-img {
     }
 }
 
-// ol.bibliography li {
-//  list-style: none;
-// }
+.nav-tabs {
+  display: block;
+}
+
+.nav-tabs>li {
+  display: inline-block;
+}
+
+.publication-head {
+  border: 0;
+  border-top: 0.6px solid #969696;
+  border-bottom: 0.6px solid #969696;
+  margin: 0 0 0 0;
+}
+
+.publication-head-content {
+  padding: 0.47rem 0 0.47rem 0.6rem;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  border: 2px solid #c2c2c2;
+  word-spacing: 0.013rem;
+}
+
+.publication-head-content h3 {
+  margin: 0;
+}
+
+.publication-title {
+  border-left: 3px solid #9a9a9a;
+  border-right: 3px solid #9a9a9a;
+  border-bottom: 3px solid #9a9a9a;
+  border-radius: 0 0 13px 13px;
+  background-color: #8c1515;
+  padding: 1.97rem 1.2rem 0.9rem 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.publication-title h2 {
+  color: white;
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.publication-content {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+
+.publication-descrip {
+  padding-left: 0;
+}
+
+ol.bibliography {
+  padding: 0.9rem 0.9rem 2rem 0.9rem;
+  margin: 0;
+}
+
+.publication-nav {
+  margin-bottom: 1rem;
+  min-height: 2.1rem;
+}
+
+.publication-nav span {
+  font-weight: 500;
+  font-size: 0.9rem;
+  float: left;
+  padding: 11px 0px 4px 12px;
+  margin-right: 1.8rem;
+}
+
+@media (max-width:40em) {
+  .publication-nav span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: block;
+    width: 100%;
+    padding: 10px 0px 4px 12px;
+    margin-bottom: 0.46rem;
+    margin-right: 0;
+  }
+}
+
+.publication-nav a {
+  color: #737373;
+  font-size: 0.87rem;
+  font-weight: 400;
+}
+
+
+ol.bibliography li {
+  padding-top: 0.18rem;
+  padding-bottom: 0.18rem;
+  margin-bottom: 0.3rem;
+}
+
+.resources-title {
+  border: 3px solid #9a9a9a;
+  border-radius: 13px;
+  background-color: #8c1515;
+  padding: 1.3rem 1.2rem 0.9rem 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.resources-title h2 {
+  color: white;
+  font-size: 1.9rem;
+}
+
+.resources-descrip {
+  margin: 0 1.2rem 2.7rem 1.2rem;
+}
+
+.resources-descrip-title {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0 0 0.3rem 0;
+}
+
+.resources-descrip-info {
+  margin: 0 0.6rem;
+  font-size: 0.87rem;
+}
+
+.people-title {
+  background-color: #f4f4f4;
+  border: 2px solid #9c9c9c;
+  border-radius: 12px;
+  padding: 0.8rem;
+  margin-top: 0.73rem;
+}
+
+.people-title h3 {
+  margin: 0;
+}

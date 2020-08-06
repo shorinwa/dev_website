@@ -3,40 +3,75 @@ title: People
 permalink: /people/
 ---
 
-## Lab Members
-
-A bustling group of people solving challenging problems holding back multi-robot systems.
+<!-- ## Lab Members -->
 
 {% assign all_people = site.people %}
-{% assign all_roles = 'researchengineer|gradstudent' | split: '|'  %}
+
+{% assign all_roles = 'Research Team' | split: '|'  %}
 
 {% for role in all_roles %}
 
-{% assign people_for_role = all_people | where: 'position',role %}
+  {% assign people_for_role = all_people | where: 'position',role %}
 
+  <br>
+  <div class="people-title">
+    <h3>Principal Investigator</h3>
+  </div>
+  <div class="list-item-people">
+    <p class="list-post-title">
+      <a href="https://web.stanford.edu/~schwager/">
+        <img
+          class="pi-thumbnail"
+          src="{{site.url}}/images/people/macschwager.jpg">
+      </a>
+      <a class="name" href="https://web.stanford.edu/~schwager/">
+        <b>Mac Schwager</b>
+      </a>
+      <p> Assistant Professor </p>
+    </p>
+  </div>
 
-<div class="pos-header">
-{% if role == 'gradstudent' %}
-  <h3>Graduate Students</h3>
-{% elsif role == 'researchengineer' %}
-  <h3>Research Engineer</h3>
-{% endif %}
-</div>
+  <div class="people-title">
+    <h3>Research Team</h3>
+  </div>
 
+  <div class="content list people">
 
-<div class="content list people">
-  {% for person in all_people %}
-    {% if person.position contains role %}
-      <div class="list-item-people">
-        <p class="list-post-title">
-          {% if person.avatar %}
-            <a href="{{site.url}}{{person.url}}">
-              <img class="profile-thumbnail" src="{{site.url}}/images/people/{{person.avatar}}"></a>
-           {% endif %}
-           <a class="name" href="{{site.url}}{{person.url}}">{{person.name}}</a>
-        </p>
-      </div>
-     {% endif %}
-  {% endfor %}
-</div>
+    {% for person in all_people %}
+      {% if person.position == 'researchengineer' %}
+        {% include person.html position=person.position %}
+      {% endif %}
+    {% endfor %}
+
+    {% for person in all_people %}
+      {% if person.position == 'postdoc' %}
+        {% include person.html position=person.position %}
+      {% endif %}
+    {% endfor %}
+
+    {% for person in all_people %}
+      {% if person.position == 'phd' %}
+        {% include person.html position=person.position %}
+      {% endif %}
+    {% endfor %}
+
+    {% for person in all_people %}
+      {% if person.position == 'gradstudent' %}
+        {% include person.html position=person.position %}
+      {% endif %}
+    {% endfor %}
+
+    {% for person in all_people %}
+      {% if person.position == 'undergrad' %}
+        {% include person.html position=person.position %}
+      {% endif %}
+    {% endfor %}
+
+    {% for person in all_people %}
+      {% if person.position == 'affiliate' %}
+        {% include person.html position=person.position %}
+      {% endif %}
+    {% endfor %}
+
+  </div>
 {% endfor %}
