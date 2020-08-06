@@ -8,7 +8,7 @@ email:
 projects:
 avatar: adamcaccavale.jpg
 permalink: /adamcaccavale/
-
+title: Adam Caccavale 
 ---
 
 Insert bio here

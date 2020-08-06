@@ -8,6 +8,7 @@ email:
 projects:
 avatar: clairechen.png
 permalink: /clairechen/
+title: Claire Chen
 ---
 
 Insert bio here

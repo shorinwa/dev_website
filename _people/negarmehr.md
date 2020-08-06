@@ -8,6 +8,7 @@ email:
 projects:
 avatar: negarmehr.jpg
 permalink: /negarmehr/
+title: Negar Mehr
 ---
 
 Insert bio here

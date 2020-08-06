@@ -8,6 +8,7 @@ email:
 projects:
 avatar: harukinishimura.jpeg
 permalink: /harukinishimura/
+title: Haruki Nishimura
 ---
 
 Insert bio here

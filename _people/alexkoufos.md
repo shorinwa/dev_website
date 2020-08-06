@@ -9,6 +9,7 @@ email: akoufos@stanford.edu
 projects:
 avatar: alexkoufos.jpg
 permalink: /alexkoufos/
+title: Alex Koufos 
 ---
 
 Alex Koufos received a PhD in Computational Physics at George Mason University in 2014 with a concentration in computational quantum mechanics. After graduation he worked for 4 years at Leidos designing and implementing visualization software for Naval training applications used throughout the US fleet. Prior to Leidos and Stanford, he conducted research in the areas of high-energy particle physics, electronic structure of materials and superconductivity.

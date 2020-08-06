@@ -1,3 +1,11 @@
+.person-row {
+  margin: 1.6rem 0 0 0;
+}
+
+.person-details {
+  margin: 0 0 1.6rem 0;
+}
+
 .img-fluid {
     width: 100%;
 }

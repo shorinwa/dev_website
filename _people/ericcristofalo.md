@@ -8,6 +8,7 @@ email:
 projects:
 avatar: ericcristofalo.jpeg
 permalink: /ericcristofalo/
+title: Eric Cristofalo
 ---
 
 Insert bio here

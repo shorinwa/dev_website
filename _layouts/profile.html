@@ -3,7 +3,7 @@ layout: default
 ---
 <link href="{{ site.url }}/css/profile.css" rel="stylesheet">
 <div class="container-fluid">
-  <div class="row">
+  <div class="person-row row">
     <div class="col-sm-4">
       <img 
         class="mx-auto d-block img-fluid"
@@ -31,7 +31,7 @@ layout: default
       <p><h3>Bio:</h3>{{content}}</p>
     </div>
   </div>
-  <div class="row">
+  <div class="person-details row">
     <div class="col-sm-4">
       <h3>Contact Info:</h3>
       <p class="profile contact"><strong>Email: </strong>{{page.email}}</p>
@@ -51,5 +51,5 @@ layout: default
         </p>
       {% endif %}
     </div>
-
+</div>
 </div>
