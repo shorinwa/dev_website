@@ -1,7 +1,55 @@
 ---
 layout: default
 ---
-<div class="container content page">
-  <h3 class="page-title">{{ page.name }}</h3>
-  {{ content }}
+<link href="{{ site.url }}/css/profile.css" rel="stylesheet">
+<div class="container-fluid">
+  <div class="person-row row">
+    <div class="col-sm-4">
+      <img 
+        class="mx-auto d-block img-fluid"
+        src="{{site.url}}/images/people/{{page.avatar}}"
+        alt="{{page.name}}"
+        style="max-width: 400px"
+      >
+    </div>
+    <div class="col-sm-8">
+      <h2 class="page-title">{{ page.name }}</h2>
+      {% if page.degree %}
+        <h5 class="degree">{{page.degree}}</h5>
+      {% endif %}
+      <p class="profile contact"><strong>Position: </strong>
+        {% include position_text.html position=page.position %}
+      </p>
+      {% if page.focus %}
+        <p class="profile contact"><strong>Focus: </strong>{{page.focus}}</p>
+      {% endif %}
+      {% if page.projects %}
+        <p class="profile contact"><strong>Projects: </strong>
+          {{page.projects}}
+        </p>
+      {% endif %}
+      <p><h3>Bio:</h3>{{content}}</p>
+    </div>
+  </div>
+  <div class="person-details row">
+    <div class="col-sm-4">
+      <h3>Contact Info:</h3>
+      <p class="profile contact"><strong>Email: </strong>{{page.email}}</p>
+      {% if page.location %}
+        <p class="profile contact"><strong>Office: </strong>
+          {{page.location}}
+        </p>
+      {% endif %}
+      {% if page.hours %}
+        <p class="profile contact"><strong>Office Hours: </strong>
+          {{page.hours}}
+        </p>
+      {% endif %}
+      {% if page.website %}
+        <p class="profile contact"><strong>Personal Website: </strong>
+          <a href={{page.website}}>{{page.name}}</a>
+        </p>
+      {% endif %}
+    </div>
+</div>
 </div>
