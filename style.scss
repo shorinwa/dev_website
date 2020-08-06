@@ -597,12 +597,12 @@ img.banner-img {
         font-weight: 300;
     }
 }
-
 .footer{
     background-color: #8c1515;
     font-size: 0.7rem;
     z-index: -1;
-    position: relative;
+    display: flex;
+    align-items: flex-end;
 
     a {
         color: #d2c295
@@ -664,6 +664,7 @@ img.banner-img {
 
 .project-container{
     z-index: -1;
+    background-color: #F9F6EF;
     hr {
         border-top: 0.05rem solid #ccc;
         border-bottom: 0.05rem solid #ccc;
@@ -674,6 +675,7 @@ img.banner-img {
     z-index: 9999;
     max-width: 85%;
     transition: box-shadow .3s;
+    background-color: #fff;
     img {
         margin: 0;
         max-height: 12rem;
@@ -689,10 +691,23 @@ img.banner-img {
 }
 
 // this has a subtle bug...
-// .project-card:hover{
-//     box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.3) !important;
-// }
+.project-card:hover{
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.project-page{
+    h2{
+        font-weight: 300;
+    }
+    p {
+        line-height: 1.5rem;
+    }
+    hr {
+        border-top: 0.05rem solid #ccc;
+        border-bottom: 0.05rem solid #ccc;
+    }
+}
 
 // ol.bibliography li {
 //  list-style: none;
-//}
+// }
