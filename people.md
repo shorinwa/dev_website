@@ -17,19 +17,9 @@ permalink: /people/
   <div class="people-title">
     <h3>Principal Investigator</h3>
   </div>
-  <div class="list-item-people">
-    <p class="list-post-title">
-      <a href="https://web.stanford.edu/~schwager/">
-        <img
-          class="pi-thumbnail"
-          src="{{site.url}}/images/people/macschwager.jpg">
-      </a>
-      <a class="name" href="https://web.stanford.edu/~schwager/">
-        <b>Mac Schwager</b>
-      </a>
-      <p> Assistant Professor </p>
-    </p>
-  </div>
+  
+  {% include mac.html %}
+  
 
   <div class="people-title">
     <h3>Research Team</h3>
