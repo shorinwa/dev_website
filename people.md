@@ -6,7 +6,7 @@ permalink: /people/
 <!-- ## Lab Members -->
 
 {% assign all_people = site.people %}
- 
+
 {% assign all_roles = 'Research Team' | split: '|'  %}
 
 {% for role in all_roles %}
@@ -36,25 +36,25 @@ permalink: /people/
     {% for person in all_people %}
       {% if person.position == 'postdoc' %}
         {% include person.html position=person.position %}
-      {% endif %} 
+      {% endif %}
     {% endfor %}
 
     {% for person in all_people %}
       {% if person.position == 'phd' %}
         {% include person.html position=person.position %}
-      {% endif %} 
+      {% endif %}
     {% endfor %}
 
     {% for person in all_people %}
       {% if person.position == 'gradstudent' %}
         {% include person.html position=person.position %}
-      {% endif %} 
+      {% endif %}
     {% endfor %}
 
     {% for person in all_people %}
       {% if person.position == 'undergrad' %}
         {% include person.html position=person.position %}
-      {% endif %} 
+      {% endif %}
     {% endfor %}
 
     {% for person in all_people %}

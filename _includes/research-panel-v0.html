@@ -1,0 +1,23 @@
+<div class="research-panel text-black justify-content-center py-5 shadow">
+    <h2 class="py-2"> <span text-align="center"><i class="fas fa-robot pr-2" display="inline"></i> Research </span> </h2>
+
+        <hr width="30%" class="mt-auto mb-4 d-none d-md-flex"></hr>
+        <hr width="40%" class="mt-auto mb-4 d-md-none"></hr>
+
+    <div class="d-flex row justify-content-center container ">
+        {% for project in site.projects %}
+            <div class="d-flex flex-column col-5 col-md-4 project-tile shadow px-2 py-2 mx-2 my-0 justify-content-center">
+                <div class="d-flex row project-title">
+                    <div class="col-12 justify-content-center">
+                        <a href="{{site.url}}{{project.url}}"><h5> {{project.title}}</h5> </a>
+                    </div>
+                </div>
+                <div class="d-flex row justify-content-center mt-auto" style="height: 100%">
+                    <div class="d-flex flex-column col-12 justify-content-center align-self-end" style="height: 100%">
+                        <img class="project-tile" src="images/projects/{{project.image}}" />
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

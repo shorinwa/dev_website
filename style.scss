@@ -1,6 +1,9 @@
 ---
 ---
-
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
+@import "scss/regular.scss";
+@import "scss/brands.scss";
 
 * {
   -webkit-box-sizing: border-box;
@@ -38,7 +41,7 @@ body {
 }
 
 a {
-  color: #268bd2;
+  color: #ccc;
   text-decoration: none;
 
   &:hover,
@@ -256,8 +259,7 @@ pre code {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
-  border-radius: 5px;
+  margin: 0;
 }
 
 table {
@@ -551,7 +553,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .list-item a:hover, .list-post-title:hover .name, .list-post-title .name:hover {
-  color: #c42929;
+  color: #ccc;
 }
 
 .funding-img {
@@ -564,7 +566,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .page-title {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.6rem;
 }
 
 img.banner-img {
@@ -576,8 +578,8 @@ img.banner-img {
 }
 
 .home-masthead{
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     text-align: center;
     width: 70%;
     background-color: E7E6E6;
@@ -614,8 +616,8 @@ img.banner-img {
     background-color: #F9F6EF;
     z-index: 9;
     position: relative;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     h2 {
         text-align: center;
         color: black;
@@ -624,24 +626,121 @@ img.banner-img {
 
     p {
         margin: 0;
-        font-size: 1em;
+        font-size: 1rem;
+    }
+    hr {
+        border-top: 0.05rem solid #ccc;
+        border-bottom: 0.05rem solid #ccc;
     }
 }
 
 @media (max-width: 767.98px) {
     .news {
         p {
-            font-size: 0.8em;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.research-panel {
+    background-color: #fff;
+    z-index: 8;
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    h2 {
+        text-align: center;
+        color: black;
+        font-weight: 500;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    hr {
+        border-top: 0.05rem solid #ccc;
+        border-bottom: 0.05rem solid #ccc;
+    }
+
+}
+
+.project-tile {
+    background-color: #fff;
+    border-radius: 0.2rem;
+    img {
+        object-fit: cover;
+        overflow: hidden;
+        min-height: 35vh;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    h5{
+        font-size: 0.8rem;
+    }
+
+    .project-title{
+        min-height: 8vh;
+    }
+
+    @media (max-width: 720px) {
+        img {
+            height: 25vh;
+            min-height: 0vh;
+        }
+        h5{
+            font-size: 0.8rem;
+        }
+        .project-title{
+            min-height: 6vh;
+        }
+    }
+
+}
+
+.project-badge{
+    border-radius: 0.2rem;
+    background-color: #fff;
+    img {
+        object-fit: cover;
+        overflow: hidden;
+        height: 30vh;
+        width: 40vh;
+        z-index: 1;
+    }
+    a {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #000;
+        text-align: center;
+    }
+    &.badge-panel{
+        transition: box-shadow .3s;
+    }
+}
+
+.project-badge:hover{
+    &.badge-panel{
+        box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.3) !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .news {
+        p {
+            font-size: 0.8rem;
         }
     }
 }
 
 .follow{
     background-color: #2F2423;
-    z-index: 8;
+    z-index: 7;
     position: relative;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     h2 {
         text-align: center;
         color: white;
@@ -651,44 +750,32 @@ img.banner-img {
         color: #d2c295
     }
     p {
-        font-size: 1em;
+        font-size: 1rem;
         font-weight: 300;
     }
 }
-
 .footer{
     background-color: #8c1515;
-    font-size: 0.7em;
+    font-size: 0.7rem;
     z-index: -1;
-    position: relative;
+    display: flex;
+    align-items: flex-end;
 
     a {
-        color: #d2c295
+        color: #d2c295;
     }
 }
 
 .icons {
-    font-size: 3em;
+    font-size: 2rem;
     a {
         color: white;
-    }
-    span.mail:before {
-        font-family: FontAwesome;
-        content:"\f0e0";
-    }
-    span.twitter:before {
-        font-family: FontAwesome;
-        content:"\f099";
-    }
-    span.github:before {
-        font-family: FontAwesome;
-        content:"\f09b";
     }
 }
 
 @media (max-width: 767.98px) {
     .icons {
-        font-size: 2em;
+        font-size: 2rem;
     }
 }
 
@@ -704,6 +791,66 @@ img.banner-img {
 
 .active {
     font-weight: 400
+}
+
+.project-masthead{
+    z-index: 9999;
+    h1 {
+       font-size: 2.5rem;
+       font-weight: 300;
+       margin: 0;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.5rem;
+    }
+}
+
+.project-container{
+    z-index: -1;
+    background-color: #F9F6EF;
+    hr {
+        border-top: 0.05rem solid #ccc;
+        border-bottom: 0.05rem solid #ccc;
+    }
+}
+
+.project-card{
+    z-index: 9999;
+    max-width: 85%;
+    transition: box-shadow .3s;
+    background-color: #fff;
+
+    img {
+        margin: 0;
+        max-height: 12rem;
+        vertical-align: middle;
+
+    }
+    p {
+        margin: 0;
+    }
+    h2{
+        margin: 0;
+    }
+}
+
+.project-card:hover{
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.project-page{
+    h2{
+        font-weight: 300;
+    }
+    p {
+        line-height: 1.5rem;
+    }
+    hr {
+        border-top: 0.05rem solid #ccc;
+        border-bottom: 0.05rem solid #ccc;
+    }
 }
 
 .nav-tabs {
@@ -825,7 +972,7 @@ ol.bibliography li {
   margin: 0 0.6rem;
   font-size: 0.87rem;
 }
-  
+
 .people-title {
   background-color: #8c1515;
   border-radius: 12px;
