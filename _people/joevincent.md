@@ -1,4 +1,4 @@
-﻿---
+---
 name: Joe Vincent
 position: gradstudent
 focus: Analysis of learned systems

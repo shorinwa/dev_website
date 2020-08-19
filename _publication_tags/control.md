@@ -5,7 +5,7 @@ permalink: publications/control
 ---
   
 
-{% assign groups = "Formation Control,Coverage Control,Optimal Control" | split: ',' %}
+{% assign groups = "Formation Control,Coverage Control,Optimal Control,Collaborative Manipulation" | split: ',' %}
 
 {% for pub_group in groups %}
 <div class="publication-head-content">
