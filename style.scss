@@ -1000,6 +1000,10 @@ ol.bibliography li {
   margin-top: 1.3rem;
 }
 
+.people-title {
+  padding-top: 1.6rem;
+}
+
 .people-title > h3::before {
   margin: 0;
   color: white;
@@ -1016,4 +1020,14 @@ ol.bibliography li {
 
 .people-list-info > span {
   font-weight: 500;
+}
+
+.person-row {
+  padding-top: 1.2rem;
+}
+
+@media (min-width:1560px) {
+  .person-row .img-fluid {
+    max-width: 400px;
+  }
 }

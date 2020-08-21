@@ -13,18 +13,14 @@ permalink: /people/
 
   {% assign people_for_role = all_people | where: 'position',role %}
 
-  <div class="people-starter">
-    <i class="fa fa-cog fa-spin"></i>
-    <p> The undeterred minds creating solutions to unsolved robotics problems. </p>
-  </div>
 
-
-  <div class="people-title">
+  <div class="people-title top">
     <h3>Principal Investigator</h3>
   </div>
   
   {% include mac.html %}
-  
+  <br>
+
   <hr class="people-group">
 
   <div class="people-title">
