@@ -36,6 +36,9 @@ nav:
     href:           "/people"
   - name:           "resources"
     href:           "/resources"
+  - name:           "videos"
+    href:           "https://www.youtube.com/channel/UC_AgJUMueDFePnVwlLDpVBQ"
+    target:         "_blank"
 
 # Sass
 sass:
