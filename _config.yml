@@ -20,6 +20,8 @@ scholar:
   bibtex_skip_fields: [doi]
   sort_by: year
   order: descending
+  details_layout: "bibtex.html"
+  details_link: "[bibtex]"
 
 # Highlighter
 highlighter:        rouge
