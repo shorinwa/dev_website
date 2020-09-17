@@ -66,5 +66,19 @@ permalink: /people/
     {% endfor %}
 
   </div>
+  
+ <div class="people-title">
+    <h3>Alumni</h3>
+  </div>
+  
+  <div class="content list people">
+	{% for person in all_people %}
+      {% if person.position == 'alumni' %}
+        {% include alumni.html position=person.position %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
 {% endfor %}
 <br>
+
