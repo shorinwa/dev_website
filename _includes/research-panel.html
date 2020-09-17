@@ -5,39 +5,49 @@
         <hr width="40%" class="mt-auto mb-2 d-md-none"></hr>
 
     <div class="row justify-content-center">
-        {% assign categories = "planning,estimation,control" | split: "," %}
+        {% assign categories = "planning-control:perception:learning" | split: ":" %}
+        {% assign projects_used = "" %}
+        {% assign projects_sorted = site.projects | sort: 'date' | reverse %}
         {% for cat in categories %}
-            {% if cat == "planning" %}
+            {% if cat == "planning-control" %}
                 {% assign bg_tag = "background-color: #BAC5B9;" %}
                 {% assign h_tag = "color: #222;" %}
-            {% elsif cat == "estimation" %}
+                {% assign title = "Planning & Control" %}
+            {% elsif cat == "perception" %}
                 {% assign bg_tag = "background-color: #D3BC8D;" %}
                 {% assign h_tag = "color: #222;" %}
-            {% else %}
+                {% assign title = "Perception" %}
+            {% elsif cat == "learning" %}
                 {% assign bg_tag = "background-color: #00778B;" %}
                 {% assign h_tag = "color: #fff;" %}
+                {% assign title = "Learning" %}
             {% endif %}
+
             <div class="col-10 col-md-6 col-xl-4 px-0">
                 <div class="mx-1 px-3 py-3 my-2 shadow" style="{{bg_tag}}">
                     <div class="row">
                         <div class="col-12">
-                            <h4 style="{{h_tag}}">{{cat | capitalize}}</h4>
+                            <h4 style="{{h_tag}}">{{title}}</h4>
                         </div>
                     </div>
-                    {% for p in site.projects %}
-                        {% if p.type == cat %}
-                            <div class="row">
-                                <div class="d-flex flex-column col-12">
-                                    <div class="d-flex flex-column mx-1 my-2 p-2 shadow project-badge badge-panel align-items-center" style="height: 40vh;">
-                                        <div class="d-flex ">
-                                            <img class="img-fluid project-badge" src="/images/projects/{{p.image}}" />
-                                        </div>
-                                        <div class="d-flex my-auto">
-                                                <a href="{{site.url}}{{p.url}}">{{p.title}}</a>
+                    {% for p in projects_sorted %}
+                        {% if p.type contains cat %}
+                            {% unless projects_used contains p.title %}
+                                <div class="row">
+                                    <div class="d-flex flex-column col-12">
+                                        <div class="d-flex flex-column mx-1 my-2 p-2 shadow project-badge badge-panel align-items-center" style="height: 40vh;">
+                                            <div class="d-flex ">
+                                                <img class="img-fluid project-badge" src="/images/projects/{{p.image}}" />
+                                            </div>
+                                            <div class="d-flex my-auto">
+                                                    <a href="{{site.url}}{{p.url}}">{{p.title}}</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                {% capture projects_used %} {{ projects_used | append: "," | append: p.title}} {% endcapture %}
+                                {% break %}
+                            {% endunless %}
                         {% endif %}
                     {% endfor %}
                 </div>
