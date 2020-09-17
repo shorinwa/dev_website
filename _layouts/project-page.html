@@ -1,27 +1,48 @@
 ---
 layout: default
 ---
-<div class="container project-page px-0">
-    <span class="d-inline-block align-middle w-100">
-        <img src="{{site.url}}{{page.banner}}" style="max-height: 275px; min-width: 100%; margin: 0;" class="img-fluid banner-img my-0" />
-    </span>
+<div class="container-fluid project-page px-0 mt-2 justify-content-center">
+    <div class="row px-auto">
+        <div class="col-8 col-md-6 col-lg-4 mx-auto pt-4">
+            <img class="img-fluid px-auto"
+            src="{{site.url}}/images/projects/{{page.image}}" />
+        </div>
 
-    <div class="row mt-5 mb-2 justify-content-center text-center">
-        <div class="col-10">
-            <h2>{{page.title}}</h2>
+        <div class="col-10 col-lg-7 mx-auto pt-4">
+            <div class="row text-center pb-2">
+                <h2> {{page.title}} </h2>
+            </div>
+            <div class="row text-justify">
+                {{page.content}}
+            </div>
         </div>
-    </div>
-    <hr width="65%" class="mt-auto mb-4 d-none d-md-flex"></hr>
-    <hr width="65%" class="mt-auto mb-4 d-md-none"></hr>
 
-    <div class="row">
-        <div class="col-10 mx-auto my-2">
-            <h4> Project Overview: </h4>
-        </div>
     </div>
-    <div class="row">
-        <div class="col-10 mx-auto">
-            {{page.content}}
+    {% if page.keyword %}
+        <hr>
+        <div class="row justify-content-center mt-4">
+            <div class="col-12">
+                <h4 class="mb-0"> Related Publications: </h4>
+                {% assign keyword = page.keyword | downcase | replace: " ", "\_" %}
+                {% bibliography --query @*[keywords={{keyword}}] %}
+            </div>
         </div>
-    </div>
+    {% endif %}
+    {% if page.youtube %}
+        {% assign links = page.youtube | split: "," %}
+        <hr class="mt-0">
+        <div class="row mt-4 mb-0">
+            <h4> Related Videos: </h4>
+        </div>
+        <div class="row mt-2 mb-4 justify-content-center">
+        {% for link in links %}
+            {% assign clean_link = link | replace: "/watch?v=", "/embed/" %}
+            <div class="col-10 col-md-6 py-2">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="{{clean_link}}" allowfullscreen></iframe>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    {% endif %}
 </div>
