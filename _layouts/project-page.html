@@ -36,7 +36,7 @@ layout: default
         </div>
         <div class="row mt-2 mb-4 justify-content-center">
         {% for link in links %}
-            {% assign clean_link = link | replace: "/watch?v=", "/embed/" %}
+            {% assign clean_link = link | replace: "/watch?v=", "/embed/" | replace: "youtu.be", "youtube.com/embed"%}
             <div class="col-10 col-md-6 py-2">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="{{clean_link}}" allowfullscreen></iframe>
