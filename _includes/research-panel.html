@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     {% for p in projects_sorted %}
-                        {% if p.type contains cat %}
+                        {% if p.type contains cat and p.featured %}
                             {% unless projects_used contains p.title %}
                                 <div class="row">
                                     <div class="d-flex flex-column col-12">

@@ -4,6 +4,7 @@ image: drone-racing.jpg
 blurb: "How should robots plan to compete? We propose a game theoretic planner which allows drones to reason online about their opponents' actions during race scenarios."
 banner: /images/projects/msl_herd-4.jpg
 type: planning-control
+featured: true
 date: 2020-09-16
 ---
 
