@@ -20,6 +20,8 @@ scholar:
   bibtex_skip_fields: [doi]
   sort_by: year
   order: descending
+  details_layout: "bibtex.html"
+  details_link: "[bibtex]"
 
 # Highlighter
 highlighter:        rouge
@@ -36,6 +38,9 @@ nav:
     href:           "/people"
   - name:           "resources"
     href:           "/resources"
+  - name:           "videos"
+    href:           "https://www.youtube.com/channel/UC_AgJUMueDFePnVwlLDpVBQ"
+    target:         "_blank"
 
 # Sass
 sass:

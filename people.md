@@ -13,13 +13,15 @@ permalink: /people/
 
   {% assign people_for_role = all_people | where: 'position',role %}
 
-  <br>
-  <div class="people-title">
+
+  <div class="people-title top">
     <h3>Principal Investigator</h3>
   </div>
   
   {% include mac.html %}
-  
+  <br>
+
+  <hr class="people-group">
 
   <div class="people-title">
     <h3>Research Team</h3>
@@ -65,3 +67,4 @@ permalink: /people/
 
   </div>
 {% endfor %}
+<br>
