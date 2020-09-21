@@ -5,6 +5,7 @@ blurb: "How should robots plan to compete? We propose a game theoretic planner w
 banner: /images/projects/msl_herd-4.jpg
 keyword: Game Theoretic Planning
 youtube: https://www.youtube.com/watch?v=ayPamTiUzvA, https://www.youtube.com/watch?v=589YHBMSFjQ
+type: planning-control, perception
 featured: true
 date: 2020-09-16
 ---
