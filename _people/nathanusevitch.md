@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /nathanusevith/
 title: Nathan Usevitch
-degree: PhD Mechanical Engineering, Stanford
+degree: PhD Mech. Engineering
+university: Stanford University
+year: 2020
 organization: Brigham Young University
 ---
 

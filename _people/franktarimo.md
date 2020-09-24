@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /franktarimo/
 title: Frank Tarimo
-degree: BS Engineering, Boston University
+degree: BS Engineering
+university: Boston University
+year: 2014
 organization: ETH Zurich
 ---
 

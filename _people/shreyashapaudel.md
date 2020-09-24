@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /shreyashapaudel/
 title: Shreyasha Paudel
-degree: MS Aero/Astro, Stanford
+degree: MS Aero/Astro
+university: Stanford University
+year: 2016
 organization: Ford Motor Company
 ---
 

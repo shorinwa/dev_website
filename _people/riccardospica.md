@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /riccardospica/
 title: Riccardo Spica
-degree: PhD Robotics, Universite de Rennes
+degree: PhD Robotics
+university: Stanford
+year: 2018
 organization: MBDA
 ---
 

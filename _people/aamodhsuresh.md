@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /aamodhsuresh/
 title: Aamodh Suresh
-degree: MS Mechanical Engineering, Boston University
+degree: MS Mech. Engineering
+university: Boston University
+year: 2016
 organization: UC San Diego
 ---
 

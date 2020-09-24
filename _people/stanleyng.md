@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /stanleyng/
 title: Stanley Ng
-degree: MS Mechanical Engineering, Boston University
+degree: MS Mech. Engineering
+university: Boston University
+year: 2015
 organization: Axcelis Technologies
 ---
 

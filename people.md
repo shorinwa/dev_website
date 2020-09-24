@@ -67,6 +67,8 @@ permalink: /people/
 
   </div>
   
+  
+ <hr>
  <div class="people-title">
     <h3>Alumni</h3>
   </div>

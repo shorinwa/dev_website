@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /zijianwang/
 title: Zijian Wang
-degree: PhD Aero/Astro, Stanford
+degree: PhD Aero/Astro
+university: Stanford University
+year: 2019
 organization:
 ---
 

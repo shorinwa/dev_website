@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /alyssapierson/
 title: Alyssa Pierson
-degree: PhD Mechanical Engineering, Boston University
+degree: PhD Mech. Engineering
+university: Boston University
+year: 2016
 organization: Massachusetts Institute of Technology
 ---
 

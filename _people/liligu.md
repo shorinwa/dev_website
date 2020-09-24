@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /liligu/
 title: Lili (Billy) Gu
-degree: BE Mechanical Engineering, Boston University
+degree: BE Mech. Engineering
+university: Boston University
+year: 2013
 organization: University of Pennsylvania
 ---
 

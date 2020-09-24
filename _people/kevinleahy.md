@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /kevinleahy/
 title: Kevin Leahy
-degree: PhD Mechanical Engineering, Boston University
+degree: PhD Mech. Engineering
+university: Boston University
+year: 2017
 organization: MIT Lincoln Laboratory
 ---
 

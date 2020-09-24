@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /chrisbecker/
 title: Chris Becker
-degree: MS Mechanical Engineering, Boston University
+degree: MS Mechanical Engineering
+university: Boston University
+year: 2013
 organization: Volpe
 ---
 

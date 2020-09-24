@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /dingjiangzhou/
 title: Dingjiang Zhou
-degree: PhD Mechanical Engineering, Boston University
+degree: PhD Mech. Engineering
+university: Boston University
+year: 2017
 organization: Bito Robotics
 ---
 

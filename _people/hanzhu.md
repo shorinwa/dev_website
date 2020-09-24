@@ -9,7 +9,8 @@ projects:
 avatar: 
 permalink: /hanzhu/
 title: Han Zhu
-degree: MEng, Boston University
+degree: MEng
+university: Boston University
 organization:
 ---
 

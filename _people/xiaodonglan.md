@@ -9,7 +9,9 @@ projects:
 avatar: 
 permalink: /xiaodonglan/
 title: Xiaodong Lan
-degree: PhD Mechanical Engineering, Boston University
+degree: PhD Mech. Engineering
+university: Boston University
+year: 2015
 organization: dispatch.ai
 ---
 
