@@ -3,7 +3,8 @@ title: Planning for Human-Robot Interaction
 image: human-avoidance.png
 blurb: "We combine risk-sensitive optimal control tools with deep generative modeling to enable robotic crowd navigation, and observe diverse interaction behavior by varying the robot's risk sensitivity."
 banner: /images/projects/msl_herd-4.jpg
-type: planning
+type: planning-control
+date: 2020-09-16
 ---
 
 This work presents a novel online framework for safe crowd-robot interaction based on risk-sensitive stochastic optimal control, wherein the risk is modeled by the entropic risk measure. The control algorithm relies on mode insertion gradient optimization for this risk measure as well as Monte Carlo sampling from Trajectron++, a state-of-the-art generative model that produces multimodal probabilistic trajectory forecasts for multiple interacting agents.
