@@ -1041,3 +1041,13 @@ ol.bibliography li {
   padding: 0.38rem 0;
   border-top: 1.3px solid #c1c1c1;
 }
+
+.project-header{
+    img {
+    object-fit: cover;
+    overflow: hidden;
+    height: 45vh;
+    width: 45vh;
+    z-index: 1;
+    }
+}
