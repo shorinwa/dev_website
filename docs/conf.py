@@ -16,9 +16,10 @@
 
 
 # -- Project information -----------------------------------------------------
+import datetime
 
 project = 'MSL Website'
-copyright = '2020, MSL'
+copyright = '2014-{}, MSL'.format(datetime.datetime.now().year)
 author = 'Alex Koufos, Joe Vincent, Ola Shorinwa, Preston Culbertson'
 
 # The full version, including alpha/beta/rc tags
@@ -31,9 +32,13 @@ release = '1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx_rtd_theme",
-    "sphinx.ext.todo"
+    'sphinx_rtd_theme',
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.todo'
 ]
+
+# Make sure the target is unique
+autosectionlabel_prefix_document = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

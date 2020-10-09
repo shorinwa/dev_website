@@ -8,10 +8,10 @@ MSL Website Documentation
 
 .. toctree::
    :maxdepth: 2
-   :titlesonly:
    :hidden:
+   :caption: Content
 
-   content/index
+   content/people
 
 Welcome to the Multi-robot Systems Laboratory documentation on website
 development. The documentation contained on these pages will help new users
