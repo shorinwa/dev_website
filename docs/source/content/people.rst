@@ -30,7 +30,7 @@ as the profile thumbnail.
 
 Below is the content of the template profile as markdown.
 
-.. literalinclude:: ../../_people/profile_template.md
+.. literalinclude:: ../../../_people/profile_template.md
     :language: text
     :linenos:
     :caption: Profile Template (:code:`_people/profile_template.md`)

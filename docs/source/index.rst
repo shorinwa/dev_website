@@ -11,6 +11,9 @@ MSL Website Documentation
    :hidden:
    :caption: Content
 
+   content/home
+   content/projects
+   content/publications
    content/people
 
 Welcome to the Multi-robot Systems Laboratory documentation on website
