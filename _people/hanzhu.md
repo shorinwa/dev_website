@@ -11,6 +11,7 @@ permalink: /hanzhu/
 title: Han Zhu
 degree: MEng
 university: Boston University
+year: 2013
 organization:
 ---
 
