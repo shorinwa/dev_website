@@ -1,6 +1,6 @@
 ---
 title: Virtual Rigid Bodies for Coordinated Agile Maneuvering of Teams of Micro Aerial Vehicles
-image: 
+image: visionform.jpg
 blurb: "We propose a method for controlling a team of quadrotor micro aerial vehicles to perform agile maneuvers while holding a fixed relative formation, as well as transitioning between a sequence of formations."
 type: planning-controls
 featured: false

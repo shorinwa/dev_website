@@ -1,6 +1,6 @@
 ---
 title: Virtual Rigid Bodies for Agile Coordination of Quadrotor Swarms and Human-Swarm Teleoperation
-image: 
+image: visionform.jpg
 blurb: "We propose  a method for controlling a swarm of quadrotor micro aerial vehicles to perform agile interleaved maneuvers while holding a fixed relative formation, and transitioning between different formations."
 type: planning-controls
 featured: false
