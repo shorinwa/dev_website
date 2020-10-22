@@ -2,7 +2,7 @@
 title: Wildfire Control and Estimation
 image: wildfire.png
 blurb: "We study algorithms for modelling, estimating, and controlling wildfires using multi-robot teams."
-type: perception, planning-control
+type: learning
 date: 2020-09-16
 ---
 
