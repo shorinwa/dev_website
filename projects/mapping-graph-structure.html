@@ -1,0 +1,201 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>A Distributed Algorithm for Mapping the Graphical Structure of Complex Environments with a Swarm of Robots</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto" />
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link href="http://localhost:4000/css/zoom.css" rel="stylesheet">
+  <script src="http://localhost:4000/js/zoom.js"></script>
+  <script src="http://localhost:4000/js/transition.js"></script>
+
+  <link rel="stylesheet" href="/style.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/logo/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/logo/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/logo/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/logo/apple-touch-icon-144x144-precomposed.png">
+
+  <!-- open graph -->
+
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:4000/projects/mapping-graph-structure">
+  <meta property="og:title" content="A Distributed Algorithm for Mapping the Graphical Structure of Complex Environments with a Swarm of Robots">
+  <meta property="og:site_name" content="Multi-Robot Systems Lab">
+  <meta property="og:description" content="
+    
+        
+            
+        
+
+        
+            
+                 A Distributed Algorithm for Mapping the Graphical Structure of Complex..." />
+  <meta property="og:image" content="http://localhost:4000/images/logo/logo_square.jpg">
+
+</head>
+
+<body id="page-top" class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark justify-content-center align-content-center">
+
+    <a class="navbar-brand mr-auto" href="/">
+        <span class="d-inline-block d-md-none align-middle">
+            <img class="my-0 img-responsive" style="max-height: 50px; margin: 0;" src="http://localhost:4000/images/msl_logo.png" />
+        </span>
+    </a>
+
+    <button class="navbar-toggler ml-auto align-content-center" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto align-items-center d">
+        <li class="my-0">
+            <a class="navbar-brand d-none d-sm-block my-0 mr-4 mr-lg-5 ml-0" href="/">
+                    <img class="my-0 img-responsive" style="max-height: 50px;" src="http://localhost:4000/images/msl_logo.png" />
+            </a>
+        </li>
+      
+        
+            <li class="nav-item my-0">
+                <a class='nav-link py-0' target="" href="/index">home</a>
+            </li>
+        
+      
+        
+            <!-- current page is active; set nav class -->
+            <li class="nav-item my-0">
+                <a class='nav-link active py-0' target="" href="/projects">projects</a>
+            </li>
+        
+      
+        
+            <li class="nav-item my-0">
+                <a class='nav-link py-0' target="" href="/publications">publications</a>
+            </li>
+        
+      
+        
+            <li class="nav-item my-0">
+                <a class='nav-link py-0' target="" href="/people">people</a>
+            </li>
+        
+      
+        
+            <li class="nav-item my-0">
+                <a class='nav-link py-0' target="" href="/resources">resources</a>
+            </li>
+        
+      
+        
+            <li class="nav-item my-0">
+                <a class='nav-link py-0' target="_blank" href="https://www.youtube.com/channel/UC_AgJUMueDFePnVwlLDpVBQ">videos</a>
+            </li>
+        
+      
+      <li class="my-0">
+          <a class="navbar-brand d-none d-sm-block my-0 mr-0 ml-4 ml-lg-5" href="https://www.stanford.edu/">
+                  <img class="my-0 img-responsive" style="max-height: 45px;" src="http://localhost:4000/images/stanford_logo.png" />
+          </a>
+      </li>
+    </ul>
+    </div>
+</nav>
+
+      <div class="container px-0">
+        <div class="container-fluid project-page px-0 mt-2 justify-content-center">
+    <div class="row px-auto my-auto">
+        <div class="col-8 col-md-6 col-lg-4 mx-auto my-auto py-4 project-header">
+            <img class="img-fluid mx-auto my-auto"
+            src="http://localhost:4000/images/projects/mapping-graph-structure.png" />
+        </div>
+
+        <div class="col-10 col-lg-7 mx-auto pt-lg-4">
+            <div class="row text-center pb-2">
+                <h2> A Distributed Algorithm for Mapping the Graphical Structure of Complex Environments with a Swarm of Robots </h2>
+            </div>
+            <div class="row text-justify">
+                <p>Distributed algorithms offer several advantages over centralized approaches due to scalability, robustness, and efficiency. To help achieve these benefits, individual robots should be designed with minimalistic capabilities. Mapping an environment is an example of a task that benefits from multi-robot approaches, but requires storing large amounts of data.</p>
+
+<p>This project seeks to uncover the graphical representation of an environment, which is significantly less memory intensive than a metric map. The robots can communicate with each other when within a certain radius, know their own locations, and can detect obstacles only through an extremely short-range sensor (e.g. a bump sensor).</p>
+
+<p>This project proposes an algorithm that guarantees each robot’s local graphical map will converge upon the environment’s true structure. To do this the robots follow the perimeters of their islands, merging maps when they come within communication range of other robots. They deviate from their paths when a new robot is within communication range and use a modified bug path following algorithm to determine if the newly discovered robot is on the same island.</p>
+
+            </div>
+        </div>
+
+    </div>
+    
+    
+        
+        <hr class="mt-0">
+        <div class="row mt-4 mb-0">
+            <h4> Related Videos: </h4>
+        </div>
+        <div class="row mt-2 mb-4 justify-content-center">
+        
+            
+            <div class="col-10 col-md-6 py-2">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6bTXm2m0GiM" allowfullscreen></iframe>
+                </div>
+            </div>
+        
+        </div>
+    
+</div>
+
+      </div>
+    <div class="footer text-white pt-2 pb-2 mt-auto">
+
+    <div class="container">
+        <div class="row icons justify-content-center">
+            <div class="col-6 col-md-3">
+                <div class="row">
+                    <div class="col-4 text-white text-center">
+                        <a href="https://www.twitter.com/stanfordmsl">
+                            <span class="fab fa-twitter"></span>
+                        </a>
+                    </div>
+                    <div class="col-4 text-white text-center">
+                        <a href="mailto:multi-robot-systems-lab@stanford.edu">
+                            <span class="fas fa-envelope"></span>
+                        </a>
+                    </div>
+                    <div class="col-4 text-white text-center">
+                        <a href="https://www.github.com/stanfordmsl">
+                            <span class="fab fa-github"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 footer-text text-white text-center mx-auto justify-content-center">
+                <i class="far fa-copyright" display="inline"></i> 2020 Stanford MSL. Powered by <a href="https://jekyllrb.com/">Jekyll.</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</html>

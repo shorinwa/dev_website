@@ -1,0 +1,531 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Planning and Control</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto" />
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link href="http://localhost:4000/css/zoom.css" rel="stylesheet">
+  <script src="http://localhost:4000/js/zoom.js"></script>
+  <script src="http://localhost:4000/js/transition.js"></script>
+
+  <link rel="stylesheet" href="/style.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/logo/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/logo/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/logo/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/logo/apple-touch-icon-144x144-precomposed.png">
+
+  <!-- open graph -->
+
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:4000/publications/planning_control">
+  <meta property="og:title" content="Planning and Control">
+  <meta property="og:site_name" content="Multi-Robot Systems Lab">
+  <meta property="og:description" content="
+  
+    Publications
+  
+  
+   Our research spans across robotic problems from estimation through planning to control with a focus on efficent distr..." />
+  <meta property="og:image" content="http://localhost:4000/images/logo/logo_square.jpg">
+
+</head>
+
+<body id="page-top" class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark justify-content-center align-content-center">
+
+    <a class="navbar-brand mr-auto" href="/">
+        <span class="d-inline-block d-md-none align-middle">
+            <img class="my-0 img-responsive" style="max-height: 50px; margin: 0;" src="http://localhost:4000/images/msl_logo.png" />
+        </span>
+    </a>
+
+    <button class="navbar-toggler ml-auto align-content-center" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto align-items-center d">
+        <li class="my-0">
+            <a class="navbar-brand d-none d-sm-block my-0 mr-4 mr-lg-5 ml-0" href="/">
+                    <img class="my-0 img-responsive" style="max-height: 50px;" src="http://localhost:4000/images/msl_logo.png" />
+            </a>
+        </li>
+      
+        
+            <li class="nav-item my-0">
+                <a class='nav-link py-0' target="" href="/index">home</a>
+            </li>
+        
+      
+        
+            <li class="nav-item my-0">
+                <a class='nav-link py-0' target="" href="/projects">projects</a>
+            </li>
+        
+      
+        
+            <!-- current page is active; set nav class -->
+            <li class="nav-item my-0">
+                <a class='nav-link active py-0' target="" href="/publications">publications</a>
+            </li>
+        
+      
+        
+            <li class="nav-item my-0">
+                <a class='nav-link py-0' target="" href="/people">people</a>
+            </li>
+        
+      
+        
+            <li class="nav-item my-0">
+                <a class='nav-link py-0' target="" href="/resources">resources</a>
+            </li>
+        
+      
+        
+            <li class="nav-item my-0">
+                <a class='nav-link py-0' target="_blank" href="https://www.youtube.com/channel/UC_AgJUMueDFePnVwlLDpVBQ">videos</a>
+            </li>
+        
+      
+      <li class="my-0">
+          <a class="navbar-brand d-none d-sm-block my-0 mr-0 ml-4 ml-lg-5" href="https://www.stanford.edu/">
+                  <img class="my-0 img-responsive" style="max-height: 45px;" src="http://localhost:4000/images/stanford_logo.png" />
+          </a>
+      </li>
+    </ul>
+    </div>
+</nav>
+
+      <div class="container px-0">
+        <div class="container">
+  <div class="publication-title">
+    <h2>Publications</h2>
+  </div>
+  <div class="publication-content">
+  <p class="publication-descrip"> Our research spans across robotic problems from estimation through planning to control with a focus on efficent distributed algorithms for multi-robots platforms.
+  </p>
+  
+  <div class="publication-nav">
+    <span>View Publications</span>
+  
+    <ul class="nav nav-tabs">
+    
+
+    <li class="nav-item ">
+      <a class="nav-link " href="/publications/" data-toggle="" aria-expanded="true">All</a>
+    </li>
+
+    
+    
+    <li class="nav-item ">
+      <a class="nav-link " href="http://localhost:4000/publications/learning" data-toggle="">Learning</a>
+    </li>
+
+    
+    
+    <li class="nav-item ">
+      <a class="nav-link " href="http://localhost:4000/publications/perception" data-toggle="">Perception</a>
+    </li>
+
+    
+    
+    <li class="nav-item active">
+      <a class="nav-link active" href="http://localhost:4000/publications/planning_control" data-toggle="">Planning and Control</a>
+    </li>
+
+  </ul>
+  
+  </div>
+
+  
+<div class="publication-head-content">
+<h3> Collaborative Manipulation </h3>
+</div>
+
+<ol class="bibliography"><li><span id="ola2020collab">Shorinwa, O., &amp; Schwager, M. (2020). Scalable Collaborative Manipulation with Distributed Trajectory Planning. In <i>Proceedings of IEEE/RSJ International Conference on Intelligent Robots and Systems. IROS’20</i> (Vol. 1, pp. 318–323). IEEE.</span>
+
+[<a href="">pdf</a>]
+
+<a class="details" href="/bibliography/ola2020collab.html">[bibtex]</a></li>
+<li><span id="culbertson2018decentralized">Culbertson, P., &amp; Schwager, M. (2018). Decentralized adaptive control for collaborative manipulation. In <i>2018 IEEE International Conference on Robotics and Automation (ICRA)</i> (pp. 278–285). IEEE.</span>
+
+[<a href="">pdf</a>]
+
+<a class="details" href="/bibliography/culbertson2018decentralized.html">[bibtex]</a></li>
+<li><span id="wang_cooperative_2018">Wang, Z., Singh, S., Pavone, M., &amp; Schwager, M. (2018). Cooperative Object Transport in 3D with Multiple Quadrotors Using No Peer Communication. In <i>2018 IEEE International Conference on Robotics and Automation (ICRA)</i> (pp. 1064–1071). Brisbane, QLD: IEEE. https://doi.org/10.1109/ICRA.2018.8460742</span>
+
+[<a href="/papers/wang_cooperative_2018.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/wang_cooperative_2018.html">[bibtex]</a></li>
+<li><span id="gros_ouijabots_2018">Wang, Z., Yang, G., Su, X., &amp; Schwager, M. (2018). OuijaBots: Omnidirectional Robots for Cooperative Object Transport with Rotation Control Using No Communication. In R. Groß, A. Kolling, S. Berman, E. Frazzoli, A. Martinoli, F. Matsuno, &amp; M. Gauci (Eds.), <i>Distributed Autonomous Robotic Systems</i> (Vol. 6, pp. 117–131). Cham: Springer International Publishing. Retrieved from http://link.springer.com/10.1007/978-3-319-73008-0_9</span>
+
+[<a href="/papers/gros_ouijabots_2018.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/gros_ouijabots_2018.html">[bibtex]</a></li>
+<li><span id="chong_multi-robot_2016">Wang, Z., &amp; Schwager, M. (2016). Multi-robot Manipulation Without Communication. In N.-Y. Chong &amp; Y.-J. Cho (Eds.), <i>Distributed Autonomous Robotic Systems</i> (Vol. 112, pp. 135–149). Tokyo: Springer Japan. https://doi.org/10.1007/978-4-431-55879-8_10</span>
+ 
+  Series Title: Springer Tracts in Advanced Robotics
+
+[<a href="/papers/chong_multi-robot_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/chong_multi-robot_2016.html">[bibtex]</a></li>
+<li><span id="wang_force-amplifying_2016">Wang, Z., &amp; Schwager, M. (2016). Force-Amplifying N-robot Transport System (Force-ANTS) for cooperative planar manipulation without communication. <i>The International Journal of Robotics Research</i>, <i>35</i>(13), 1564–1586. https://doi.org/10.1177/0278364916667473</span>
+
+[<a href="/papers/wang_force-amplifying_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/wang_force-amplifying_2016.html">[bibtex]</a></li>
+<li><span id="wang2016force">Wang, Z., &amp; Schwager, M. (2016). Force-amplifying n-robot transport system (force-ants) for cooperative planar manipulation without communication. <i>The International Journal of Robotics Research</i>, <i>35</i>(13), 1564–1586.</span>
+
+[<a href="">pdf</a>]
+
+<a class="details" href="/bibliography/wang2016force.html">[bibtex]</a></li>
+<li><span id="wang_kinematic_2016">Wang, Z., &amp; Schwager, M. (2016). Kinematic multi-robot manipulation with no communication using force feedback. In <i>2016 IEEE International Conference on Robotics and Automation (ICRA)</i> (pp. 427–432). Stockholm, Sweden: IEEE. https://doi.org/10.1109/ICRA.2016.7487163</span>
+
+[<a href="/papers/wang_kinematic_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/wang_kinematic_2016.html">[bibtex]</a></li></ol>
+
+<div class="publication-head-content">
+<h3> Game Theoretic Planning </h3>
+</div>
+
+<ol class="bibliography"><li><span id="spica_real-time_2020">Spica, R., Falanga, D., Cristofalo, E., Montijano, E., Scaramuzza, D., &amp; Schwager, M. (2020). A Real-Time Game Theoretic Planner for Autonomous Two-Player Drone Racing. <i>IEEE Transactions on Robotics</i>, 9.</span>
+ 
+  Under review
+
+[<a href="/papers/spica_real-time_2020.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/spica_real-time_2020.html">[bibtex]</a></li>
+<li><span id="le_cleach_algames_2020">Le Cleac’h, S., Schwager, M., &amp; Manchester, Z. (2020). ALGAMES: A Fast Solver for Constrained Dynamic Games. In <i>Robotics: Science and Systems XVI</i>. Robotics: Science and Systems Foundation. https://doi.org/10.15607/RSS.2020.XVI.091</span>
+
+[<a href="/papers/le_cleach_algames_2020.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/le_cleach_algames_2020.html">[bibtex]</a></li>
+<li><span id="notomista_enhancing_2020">Notomista, G., Wang, M., Schwager, M., &amp; Egerstedt, M. (2020). Enhancing Game-Theoretic Autonomous Car Racing Using Control Barrier Functions. In <i>2020 IEEE International Conference on Robotics and Automation (ICRA)</i> (p. 7).</span>
+
+[<a href="/papers/notomista_enhancing_2020.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/notomista_enhancing_2020.html">[bibtex]</a></li>
+<li><span id="wang_multi-agent_2020">Wang, Z., Taubner, T., &amp; Schwager, M. (2020). Multi-agent sensitivity enhanced iterative best response: A real-time game theoretic planner for drone racing in 3D environments. <i>Robotics and Autonomous Systems</i>, <i>125</i>, 103410. https://doi.org/10.1016/j.robot.2019.103410</span>
+
+[<a href="/papers/wang_multi-agent_2020.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/wang_multi-agent_2020.html">[bibtex]</a></li>
+<li><span id="wang_game_2019">Wang, M., Wang, Z., Talbot, J., Christian Gerdes, J., &amp; Schwager, M. (2019). Game Theoretic Planning for Self-Driving Cars in Competitive Scenarios. In <i>Robotics: Science and Systems XV</i>. Robotics: Science and Systems Foundation. https://doi.org/10.15607/RSS.2019.XV.048</span>
+
+[<a href="/papers/wang_game_2019.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/wang_game_2019.html">[bibtex]</a></li>
+<li><span id="wang_game_2020">Wang, Z., Spica, R., &amp; Schwager, M. (2019). Game Theoretic Motion Planning for Multi-robot Racing. In <i>Distributed Autonomous Robotic Systems</i> (Vol. 9, pp. 225–238). Retrieved from http://link.springer.com/10.1007/978-3-030-05816-6_16</span>
+
+[<a href="">pdf</a>]
+
+<a class="details" href="/bibliography/wang_game_2020.html">[bibtex]</a></li></ol>
+
+<div class="publication-head-content">
+<h3> Cooperative Planning </h3>
+</div>
+
+<ol class="bibliography"><li><span id="haksar_spatial_2020">Haksar, R. N., Trimpe, S., &amp; Schwager, M. (2020). Spatial Scheduling of Informative Meetings for Multi-Agent Persistent Coverage. <i>IEEE Robotics and Automation Letters</i>, <i>5</i>(2), 3027–3034. https://doi.org/10.1109/LRA.2020.2974715</span>
+
+[<a href="/papers/haksar_spatial_2020.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/haksar_spatial_2020.html">[bibtex]</a></li>
+<li><span id="culbertson_multi-robot_2019">Culbertson, P., Bandyopadhyay, S., &amp; Schwager, M. (2019). Multi-Robot Assembly Sequencing via  Discrete Optimization. Macau, China.</span>
+
+[<a href="/papers/culbertson_multi-robot_2019.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/culbertson_multi-robot_2019.html">[bibtex]</a></li>
+<li><span id="wang_distributed_2019">Wang, M., &amp; Schwager, M. (2019). Distributed Collision Avoidance of Multiple Robots with Probabilistic Buffered Voronoi Cells. In <i>2019 International Symposium on Multi-Robot and Multi-Agent Systems (MRS)</i> (pp. 169–175). New Brunswick, NJ, USA: IEEE. https://doi.org/10.1109/MRS.2019.8901101</span>
+
+[<a href="/papers/wang_distributed_2019.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/wang_distributed_2019.html">[bibtex]</a></li>
+<li><span id="wang_safe_2018">Wang, M., Wang, Z., Paudel, S., &amp; Schwager, M. (2018). Safe Distributed Lane Change Maneuvers for Multiple Autonomous Vehicles Using Buffered Input Cells. In <i>2018 IEEE International Conference on Robotics and Automation (ICRA)</i> (pp. 4678–4684). Brisbane, QLD: IEEE. https://doi.org/10.1109/ICRA.2018.8460898</span>
+
+[<a href="/papers/wang_safe_2018.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/wang_safe_2018.html">[bibtex]</a></li>
+<li><span id="zhou_agile_2018">Zhou, D., Wang, Z., &amp; Schwager, M. (2018). Agile Coordination and Assistive Collision Avoidance for Quadrotor Swarms Using Virtual Structures. <i>IEEE Transactions on Robotics</i>, <i>34</i>(4), 916–923. https://doi.org/10.1109/TRO.2018.2857477</span>
+
+[<a href="/papers/zhou_agile_2018.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/zhou_agile_2018.html">[bibtex]</a></li>
+<li><span id="zhou_fast_2017">Zhou, D., Wang, Z., Bandyopadhyay, S., &amp; Schwager, M. (2017). Fast, On-line Collision Avoidance for Dynamic Vehicles Using Buffered Voronoi Cells. <i>IEEE Robotics and Automation Letters</i>, <i>2</i>(2), 1047–1054. https://doi.org/10.1109/LRA.2017.2656241</span>
+
+[<a href="/papers/zhou_fast_2017.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/zhou_fast_2017.html">[bibtex]</a></li>
+<li><span id="yu_correlated_2016">Yu, J., Schwager, M., &amp; Rus, D. (2016). Correlated Orienteering Problem and its Application to Persistent Monitoring Tasks. <i>IEEE Transactions on Robotics</i>, <i>32</i>(5), 1106–1118. https://doi.org/10.1109/TRO.2016.2593450</span>
+
+[<a href="/papers/yu_correlated_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/yu_correlated_2016.html">[bibtex]</a></li>
+<li><span id="pierson_bio-inspired_2015">Pierson, A., &amp; Schwager, M. (2015). Bio-inspired non-cooperative multi-robot herding. In <i>2015 IEEE International Conference on Robotics and Automation (ICRA)</i> (pp. 1843–1849). Seattle, WA, USA: IEEE. https://doi.org/10.1109/ICRA.2015.7139438</span>
+
+[<a href="/papers/pierson_bio-inspired_2015.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/pierson_bio-inspired_2015.html">[bibtex]</a></li>
+<li><span id="leahy_distributed_2015">Leahy, K., Jones, A., Schwager, M., &amp; Belta, C. (2015). Distributed information gathering policies under temporal logic constraints. In <i>2015 54th IEEE Conference on Decision and Control (CDC)</i> (pp. 6803–6808). Osaka: IEEE. https://doi.org/10.1109/CDC.2015.7403291</span>
+
+[<a href="/papers/leahy_distributed_2015.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/leahy_distributed_2015.html">[bibtex]</a></li>
+<li><span id="haksar_consensus-based_nodate">Haksar, R. N., Shorinwa, O., &amp; Washington, P. Consensus-based ADMM for Task Assignment in Multi-Robot Teams, 16.</span>
+
+[<a href="/papers/haksar_consensus-based_nodate.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/haksar_consensus-based_nodate.html">[bibtex]</a></li></ol>
+
+<div class="publication-head-content">
+<h3> Formation Control </h3>
+</div>
+
+<ol class="bibliography"><li><span id="vasile_translational_2018">Vasile, C.-I., Schwager, M., &amp; Belta, C. (2018). Translational and Rotational Invariance in Networked Dynamical Systems. <i>IEEE Transactions on Control of Network Systems</i>, <i>5</i>(3), 822–832. https://doi.org/10.1109/TCNS.2017.2648499</span>
+
+[<a href="/papers/vasile_translational_2018.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/vasile_translational_2018.html">[bibtex]</a></li>
+<li><span id="alonso-mora_distributed_2016">Alonso-Mora, J., Montijano, E., Schwager, M., &amp; Rus, D. (2016). Distributed Multi-Robot Navigation in Formation among Obstacles: A Geometric and Optimization Approach with Consensus. In <i>2016 IEEE International Conference on Robotics and Automation (ICRA)</i> (p. 8).</span>
+
+[<a href="/papers/alonso-mora_distributed_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/alonso-mora_distributed_2016.html">[bibtex]</a></li>
+<li><span id="montijano_vision-based_2016">Montijano, E., Cristofalo, E., Zhou, D., Schwager, M., &amp; Sagues, C. (2016). Vision-Based Distributed Formation Control Without an External Positioning System. <i>IEEE Transactions on Robotics</i>, <i>32</i>(2), 339–351. https://doi.org/10.1109/TRO.2016.2523542</span>
+
+[<a href="/papers/montijano_vision-based_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/montijano_vision-based_2016.html">[bibtex]</a></li>
+<li><span id="montijano_distributed_2016">Montijano, E., Cristofalo, E., Schwager, M., &amp; Sagues, C. (2016). Distributed formation control of non-holonomic robots without a global reference frame. In <i>2016 IEEE International Conference on Robotics and Automation (ICRA)</i> (pp. 5248–5254). Stockholm: IEEE. https://doi.org/10.1109/ICRA.2016.7487734</span>
+
+[<a href="/papers/montijano_distributed_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/montijano_distributed_2016.html">[bibtex]</a></li>
+<li><span id="zhou_virtual_2015">Zhou, D., &amp; Schwager, M. (2015). Virtual Rigid Bodies for coordinated agile maneuvering of teams of micro aerial vehicles. In <i>2015 IEEE International Conference on Robotics and Automation (ICRA)</i> (pp. 1737–1742). Seattle, WA: IEEE. https://doi.org/10.1109/ICRA.2015.7139422</span>
+
+[<a href="/papers/zhou_virtual_2015.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/zhou_virtual_2015.html">[bibtex]</a></li>
+<li><span id="vasile_sen_2015">Vasile, C.-I., Schwager, M., &amp; Belta, C. (2015). SE(N) invariance in networked systems. In <i>2015 European Control Conference (ECC)</i> (pp. 186–191). Linz, Austria: IEEE. https://doi.org/10.1109/ECC.2015.7330544</span>
+
+[<a href="/papers/vasile_sen_2015.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/vasile_sen_2015.html">[bibtex]</a></li>
+<li><span id="montijano_distributed_2014">Montijano, E., Zhou, D., Schwager, M., &amp; Sagues, C. (2014). Distributed formation control without a global reference frame. In <i>2014 American Control Conference</i> (pp. 3862–3867). Portland, OR, USA: IEEE. https://doi.org/10.1109/ACC.2014.6859235</span>
+
+[<a href="/papers/montijano_distributed_2014.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/montijano_distributed_2014.html">[bibtex]</a></li></ol>
+
+<div class="publication-head-content">
+<h3> Persistent Surveillance </h3>
+</div>
+
+<ol class="bibliography"><li><span id="leahy_persistent_2016">Leahy, K., Zhou, D., Vasile, C.-I., Oikonomopoulos, K., Schwager, M., &amp; Belta, C. (2016). Persistent surveillance for unmanned aerial vehicles subject to charging and temporal logic constraints. <i>Autonomous Robots</i>, <i>40</i>(8), 1363–1378. https://doi.org/10.1007/s10514-015-9519-z</span>
+
+[<a href="/papers/leahy_persistent_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/leahy_persistent_2016.html">[bibtex]</a></li>
+<li><span id="hsieh_provably_2016">Leahy, K., Zhou, D., Vasile, C.-I., Oikonomopoulos, K., Schwager, M., &amp; Belta, C. (2016). Provably Correct Persistent Surveillance for Unmanned Aerial Vehicles Subject to Charging Constraints. In M. A. Hsieh, O. Khatib, &amp; V. Kumar (Eds.), <i>Experimental Robotics</i> (Vol. 109, pp. 605–619). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-319-23778-7_40</span>
+ 
+  Series Title: Springer Tracts in Advanced Robotics
+
+[<a href="/papers/hsieh_provably_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/hsieh_provably_2016.html">[bibtex]</a></li>
+<li><span id="lan_planning_2013">Lan, X., &amp; Schwager, M. (2013). Planning periodic persistent monitoring trajectories for sensing robots in Gaussian Random Fields. In <i>2013 IEEE International Conference on Robotics and Automation</i> (pp. 2415–2420). Karlsruhe, Germany: IEEE. https://doi.org/10.1109/ICRA.2013.6630905</span>
+
+[<a href="/papers/lan_planning_2013.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/lan_planning_2013.html">[bibtex]</a></li>
+<li><span id="smith_persistent_2012">Smith, S. L., Schwager, M., &amp; Rus, D. (2012). Persistent Robotic Tasks: Monitoring and Sweeping in Changing Environments. <i>IEEE Transactions on Robotics</i>, <i>28</i>(2), 410–426. https://doi.org/10.1109/TRO.2011.2174493</span>
+
+[<a href="/papers/smith_persistent_2012.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/smith_persistent_2012.html">[bibtex]</a></li>
+<li><span id="soltero_generating_2012">Soltero, D. E., Schwager, M., &amp; Rus, D. (2012). Generating informative paths for persistent sensing in unknown environments. In <i>2012 IEEE/RSJ International Conference on Intelligent Robots and Systems</i> (pp. 2172–2179). Vilamoura-Algarve, Portugal: IEEE. https://doi.org/10.1109/IROS.2012.6385730</span>
+
+[<a href="/papers/soltero_generating_2012.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/soltero_generating_2012.html">[bibtex]</a></li></ol>
+
+<div class="publication-head-content">
+<h3> Coverage Control </h3>
+</div>
+
+<ol class="bibliography"><li><span id="schwager_robust_2017">Schwager, M., Vitus, M. P., Powers, S., Rus, D., &amp; Tomlin, C. J. (2017). Robust Adaptive Coverage Control for Robotic Sensor Networks. <i>IEEE Transactions on Control of Network Systems</i>, <i>4</i>(3), 462–476. https://doi.org/10.1109/TCNS.2015.2512326</span>
+
+[<a href="/papers/schwager_robust_2017.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/schwager_robust_2017.html">[bibtex]</a></li>
+<li><span id="inaba_adaptive_2016">Pierson, A., &amp; Schwager, M. (2016). Adaptive Inter-Robot Trust for Robust Multi-Robot Sensor Coverage. In M. Inaba &amp; P. Corke (Eds.), <i>2013 International Symposium of Robotics Research (ISRR)</i> (Vol. 114, pp. 167–183). Cham: Springer International Publishing. Retrieved from http://link.springer.com/10.1007/978-3-319-28872-7_10</span>
+
+[<a href="/papers/inaba_adaptive_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/inaba_adaptive_2016.html">[bibtex]</a></li>
+<li><span id="pierson_adapting_2015">Pierson, A., Figueiredo, L. C., Pimenta, L. C. A., &amp; Schwager, M. (2015). Adapting to performance variations in multi-robot coverage. In <i>2015 IEEE International Conference on Robotics and Automation (ICRA)</i> (pp. 415–420). Seattle, WA, USA: IEEE. https://doi.org/10.1109/ICRA.2015.7139032</span>
+
+[<a href="/papers/pierson_adapting_2015.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/pierson_adapting_2015.html">[bibtex]</a></li>
+<li><span id="soltero_decentralized_2014">Soltero, D. E., Schwager, M., &amp; Rus, D. (2014). Decentralized path planning for coverage tasks using gradient descent adaptive control. <i>The International Journal of Robotics Research</i>, <i>33</i>(3), 401–425. https://doi.org/10.1177/0278364913497241</span>
+
+[<a href="/papers/soltero_decentralized_2014.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/soltero_decentralized_2014.html">[bibtex]</a></li></ol>
+
+<div class="publication-head-content">
+<h3> Signal Temporal Logic </h3>
+</div>
+
+<ol class="bibliography"><li><span id="jones_information-guided_2015">Jones, A., Schwager, M., &amp; Belta, C. (2015). Information-guided persistent monitoring under temporal logic constraints. In <i>2015 American Control Conference (ACC)</i> (pp. 1911–1916). Chicago, IL, USA: IEEE. https://doi.org/10.1109/ACC.2015.7171012</span>
+
+[<a href="/papers/jones_information-guided_2015.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/jones_information-guided_2015.html">[bibtex]</a></li>
+<li><span id="jones_distribution_2013">Jones, A., Schwager, M., &amp; Belta, C. (2013). Distribution temporal logic: Combining correctness with quality of estimation. In <i>52nd IEEE Conference on Decision and Control</i> (pp. 4719–4724). Firenze: IEEE. https://doi.org/10.1109/CDC.2013.6760628</span>
+
+[<a href="/papers/jones_distribution_2013.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/jones_distribution_2013.html">[bibtex]</a></li>
+<li><span id="jones_receding_2013">Jones, A., Schwager, M., &amp; Belta, C. (2013). A receding horizon algorithm for informative path planning with temporal logic constraints. In <i>2013 IEEE International Conference on Robotics and Automation</i> (pp. 5019–5024). Karlsruhe, Germany: IEEE. https://doi.org/10.1109/ICRA.2013.6631294</span>
+
+[<a href="/papers/jones_receding_2013.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/jones_receding_2013.html">[bibtex]</a></li></ol>
+
+<div class="publication-head-content">
+<h3> Pursuit Evasion </h3>
+</div>
+
+<ol class="bibliography"><li><span id="shah_grape_2019">Shah, K., &amp; Schwager, M. (2019). GRAPE: Geometric Risk-Aware Pursuit-Evasion. <i>Robotics and Autonomous Systems</i>, <i>121</i>, 103246. https://doi.org/10.1016/j.robot.2019.07.016</span>
+
+[<a href="/papers/shah_grape_2019.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/shah_grape_2019.html">[bibtex]</a></li>
+<li><span id="correll_multi-agent_2019">Shah, K., &amp; Schwager, M. (2019). Multi-agent Cooperative Pursuit-Evasion Strategies Under Uncertainty. In N. Correll, M. Schwager, &amp; M. Otte (Eds.), <i>Distributed Autonomous Robotic Systems</i> (Vol. 9, pp. 451–468). Cham: Springer International Publishing. Retrieved from http://link.springer.com/10.1007/978-3-030-05816-6_32</span>
+
+[<a href="/papers/correll_multi-agent_2019.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/correll_multi-agent_2019.html">[bibtex]</a></li>
+<li><span id="pierson_intercepting_2017">Pierson, A., Wang, Z., &amp; Schwager, M. (2017). Intercepting Rogue Robots: An Algorithm for Capturing Multiple Evaders With Multiple Pursuers. <i>IEEE Robotics and Automation Letters</i>, <i>2</i>(2), 530–537. https://doi.org/10.1109/LRA.2016.2645516</span>
+
+[<a href="/papers/pierson_intercepting_2017.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/pierson_intercepting_2017.html">[bibtex]</a></li>
+<li><span id="pierson_cooperative_2016">Pierson, A., Ataei, A., Paschalidis, I. C., &amp; Schwager, M. (2016). Cooperative multi-quadrotor pursuit of an evader in an environment with no-fly zones. In <i>2016 IEEE International Conference on Robotics and Automation (ICRA)</i> (pp. 320–326). Stockholm, Sweden: IEEE. https://doi.org/10.1109/ICRA.2016.7487151</span>
+
+[<a href="/papers/pierson_cooperative_2016.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/pierson_cooperative_2016.html">[bibtex]</a></li></ol>
+
+<div class="publication-head-content">
+<h3> Soft Robotics </h3>
+</div>
+
+<ol class="bibliography"><li><span id="usevitch_linear_2017">Usevitch, N., Hammond, Z., Follmer, S., &amp; Schwager, M. (2017). Linear actuator robots: Differential kinematics, controllability, and algorithms for locomotion and shape morphing. In <i>2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i> (pp. 5361–5367). Vancouver, BC: IEEE. https://doi.org/10.1109/IROS.2017.8206431</span>
+
+[<a href="/papers/usevitch_linear_2017.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/usevitch_linear_2017.html">[bibtex]</a></li></ol>
+
+<div class="publication-head-content">
+<h3> Belief Space Control </h3>
+</div>
+
+<ol class="bibliography"><li><span id="morales_sacbp_2020">Nishimura, H., &amp; Schwager, M. (2020). SACBP: Belief Space Planning for Continuous-Time Dynamical Systems via Stochastic Sequential Action Control. In M. Morales, L. Tapia, G. Sánchez-Ante, &amp; S. Hutchinson (Eds.), <i>Algorithmic Foundations of Robotics XIII</i> (Vol. 14, pp. 267–283). Cham: Springer International Publishing. Retrieved from http://link.springer.com/10.1007/978-3-030-44051-0_16</span>
+
+[<a href="/papers/morales_sacbp_2020.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/morales_sacbp_2020.html">[bibtex]</a></li></ol>
+
+<div class="publication-head-content">
+<h3> Optimal Control </h3>
+</div>
+
+<ol class="bibliography"><li><span id="cristofalo_vision-based_2020">Cristofalo, E., Montijano, E., &amp; Schwager, M. (2020). Vision-Based Control for Fast 3-D Reconstruction With an Aerial Robot. <i>IEEE Transactions on Control Systems Technology</i>, <i>28</i>(4), 1189–1202. https://doi.org/10.1109/TCST.2019.2905227</span>
+
+[<a href="/papers/cristofalo_vision-based_2020.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/cristofalo_vision-based_2020.html">[bibtex]</a></li>
+<li><span id="haksar_controlling_2018">Haksar, R. N., &amp; Schwager, M. (2018). Controlling Large, Graph-based MDPs with Global Control Capacity Constraints: An Approximate LP Solution. In <i>2018 IEEE Conference on Decision and Control (CDC)</i> (pp. 35–42). Miami Beach, FL: IEEE. https://doi.org/10.1109/CDC.2018.8618745</span>
+
+[<a href="/papers/haksar_controlling_2018.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/haksar_controlling_2018.html">[bibtex]</a></li>
+<li><span id="lan_variational_2014">Lan, X., &amp; Schwager, M. (2014). A variational approach to trajectory planning for persistent monitoring of spatiotemporal fields. In <i>2014 American Control Conference</i> (pp. 5627–5632). Portland, OR, USA: IEEE. https://doi.org/10.1109/ACC.2014.6859098</span>
+
+[<a href="/papers/lan_variational_2014.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/lan_variational_2014.html">[bibtex]</a></li>
+<li><span id="zhou_vector_2014">Zhou, D., &amp; Schwager, M. (2014). Vector field following for quadrotors using differential flatness. In <i>2014 IEEE International Conference on Robotics and Automation (ICRA)</i> (pp. 6567–6572). Hong Kong, China: IEEE. https://doi.org/10.1109/ICRA.2014.6907828</span>
+
+[<a href="/papers/zhou_vector_2014.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/zhou_vector_2014.html">[bibtex]</a></li>
+<li><span id="smith_rebalancing_2013">Smith, S. L., Pavone, M., Schwager, M., Frazzoli, E., &amp; Rus, D. (2013). Rebalancing the rebalancers: optimally routing vehicles and drivers in mobility-on-demand systems. In <i>2013 American Control Conference</i> (pp. 2362–2367). Washington, DC: IEEE. https://doi.org/10.1109/ACC.2013.6580187</span>
+
+[<a href="/papers/smith_rebalancing_2013.pdf">pdf</a>]
+
+<a class="details" href="/bibliography/smith_rebalancing_2013.html">[bibtex]</a></li></ol>
+
+
+</div>
+</div>
+      </div>
+    <div class="footer text-white pt-2 pb-2 mt-auto">
+
+    <div class="container">
+        <div class="row icons justify-content-center">
+            <div class="col-6 col-md-3">
+                <div class="row">
+                    <div class="col-4 text-white text-center">
+                        <a href="https://www.twitter.com/stanfordmsl">
+                            <span class="fab fa-twitter"></span>
+                        </a>
+                    </div>
+                    <div class="col-4 text-white text-center">
+                        <a href="mailto:multi-robot-systems-lab@stanford.edu">
+                            <span class="fas fa-envelope"></span>
+                        </a>
+                    </div>
+                    <div class="col-4 text-white text-center">
+                        <a href="https://www.github.com/stanfordmsl">
+                            <span class="fab fa-github"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 footer-text text-white text-center mx-auto justify-content-center">
+                <i class="far fa-copyright" display="inline"></i> 2020 Stanford MSL. Powered by <a href="https://jekyllrb.com/">Jekyll.</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</html>
