@@ -26,10 +26,11 @@ layout: default
     </div>
 </div>
 
-<div class="project-container container justify-content-center py-4">
+<div class="project-container container justify-content-center py-5">
     <div class="row justify-content-center py-2">
         <div class="col-10 text-center">
-            <h2> Current Projects </h2>
+            <h2><i class="fas fa-robot pr-2" display="inline"></i>
+             Current Projects </h2>
         </div>
     </div>
     <hr width="35%" class="mt-auto mb-4 d-none d-md-flex"></hr>
@@ -72,12 +73,12 @@ layout: default
             {% endif %}
 
             <div id="{{cat}}" class="{{card_class}}" aria-labelledby="heading-{{cat}}" data-parent="#project-accordion">
-                <div class="card-body">
+                <div class="card-body bg-white">
                     {% assign proj_counter = 0 %}
                     {% for project in projects_sorted %}
                         {% if project.type contains cat %}
                             {% assign rem = proj_counter | modulo: 2 %}
-                            {% assign default_card_class = "row project-card align-content-center justify-content-center shadow mx-2 py-4 px-4" %}
+                            {% assign default_card_class = "row project-card align-content-center justify-content-center mx-2 py-4 px-4" %}
                             {% if forloop.index ==  site.projects.size %}
                                 {% capture card_class %} {{"mt-3 " | append: default_card_class}} {% endcapture %}
                             {% else %}

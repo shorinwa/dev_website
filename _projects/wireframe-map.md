@@ -3,6 +3,7 @@ title: Wireframe Mapping for Resource-Constrained Robots
 image: wireframe-map.png
 blurb: "How can robots build and store maps well-suited to sparse environments? We propose a distributed algorithm for exploring and mapping a sparse environment under resource constraints."
 type: perception
+featured: true
 date: 2019-11-01
 ---
 
