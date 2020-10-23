@@ -87,16 +87,16 @@ layout: default
                                 <div class="{{card_class}}">
                                     {% if rem == 1 %}
                                     <div class="col-10 col-md-8 col-lg-4 mb-3 mb-lg-0 mx-auto align-middle">
-                                        <img src="{{site.url}}/images/projects/{{project.image}}" class="mx-auto"/>
+                                        <img src="{{site.baseurl}}/images/projects/{{project.image}}" class="mx-auto"/>
                                     </div>
                                     {% else %}
                                         <div class="col-10 col-md-8 col-lg-4 d-lg-none mb-3 mb-lg-0 mx-auto align-middle">
-                                            <img src="{{site.url}}/images/projects/{{project.image}}" class="mx-auto"/>
+                                            <img src="{{site.baseurl}}/images/projects/{{project.image}}" class="mx-auto"/>
                                         </div>
                                     {% endif %}
                                     <div class="col-md-10 col-lg-6 align-middle mx-auto my-auto">
                                         <div class="row justify-content-center text-center">
-                                            <a href="{{site.url}}{{project.url}}">
+                                            <a href="{{site.baseurl}}{{project.url}}">
                                                 <h3> {{project.title}} </h3>
                                             </a>
                                         </div>
@@ -107,7 +107,7 @@ layout: default
                                     </div>
                                     {% if rem == 0 %}
                                         <div class="col-lg-4 d-none d-lg-flex mb-3 mb-lg-0 mx-auto align-middle">
-                                            <img src="{{site.url}}/images/projects/{{project.image}}"  class="mx-auto"/>
+                                            <img src="{{site.baseurl}}/images/projects/{{project.image}}"  class="mx-auto"/>
                                         </div>
                                     {% endif %}
                                 </div>

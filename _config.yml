@@ -5,7 +5,7 @@ description:        "Solving robotics problems through multi-robot approaches."
 
 # URL
 url:                http://127.0.0.1:4000
-baseurl:
+baseurl:            /dev_website
 permalink:          /:year/:month/:day/:title.html
 
 # Markdown
@@ -45,6 +45,7 @@ nav:
 # Sass
 sass:
   style:            :compressed
+  sass_dir:         "./scss"
 
 # Scopes
 defaults:
@@ -73,7 +74,6 @@ defaults:
       type:         "projects"
     values:
       layout:       "project-page"
-
 
 collections:
   publication_tags:

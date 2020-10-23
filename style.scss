@@ -1,9 +1,13 @@
 ---
 ---
-@import "scss/fontawesome.scss";
-@import "scss/solid.scss";
-@import "scss/regular.scss";
-@import "scss/brands.scss";
+// Variables to modify font folders
+$fa-font-path:        {{"webfonts" | relative_url}};
+
+
+@import "fontawesome.scss";
+@import "solid.scss";
+@import "regular.scss";
+@import "brands.scss";
 
 * {
   -webkit-box-sizing: border-box;
