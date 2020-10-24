@@ -6,3 +6,4 @@ _support/**
 
 docs/_build
 
+.DS_*
