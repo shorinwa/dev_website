@@ -11,6 +11,10 @@ permalink:          /:year/:month/:day/:title.html
 # Markdown
 markdown:           kramdown
 
+# Plugins
+plugins:
+  - jekyll-scholar
+
 # scholar
 scholar:
   # style: ieee
