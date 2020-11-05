@@ -1,9 +1,13 @@
 ---
 ---
-@import "scss/fontawesome.scss";
-@import "scss/solid.scss";
-@import "scss/regular.scss";
-@import "scss/brands.scss";
+// Variables to modify font folders
+$fa-font-path:        {{"webfonts" | relative_url}};
+
+
+@import "fontawesome.scss";
+@import "solid.scss";
+@import "regular.scss";
+@import "brands.scss";
 
 * {
   -webkit-box-sizing: border-box;
@@ -710,6 +714,7 @@ img.banner-img {
 .project-badge{
     border-radius: 0.2rem;
     background-color: #fff;
+    height: 45vh;
     img {
         object-fit: cover;
         overflow: hidden;
@@ -802,6 +807,7 @@ img.banner-img {
 
 .project-masthead{
     z-index: 9999;
+    position: relative;
     h1 {
        font-size: 2.5rem;
        font-weight: 300;
@@ -815,8 +821,9 @@ img.banner-img {
 }
 
 .project-container{
-    z-index: -1;
+    z-index: 99;
     background-color: #F9F6EF;
+    position: relative;
     hr {
         border-top: 0.05rem solid #ccc;
         border-bottom: 0.05rem solid #ccc;
@@ -827,7 +834,8 @@ img.banner-img {
     z-index: 9999;
     max-width: 85%;
     transition: box-shadow .3s;
-    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0.375rem 0.625rem rgba(0,0,0, 0.4);
 
     img {
         margin: 0;
@@ -844,7 +852,7 @@ img.banner-img {
 }
 
 .project-card:hover{
-    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.6) !important;
 }
 
 .project-page{

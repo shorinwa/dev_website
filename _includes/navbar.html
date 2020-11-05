@@ -2,7 +2,7 @@
 
     <a class="navbar-brand mr-auto" href="/">
         <span class="d-inline-block d-md-none align-middle">
-            <img class="my-0 img-responsive" style="max-height: 50px; margin: 0;" src="{{site.url}}/images/msl_logo.png" />
+            <img class="my-0 img-responsive" style="max-height: 50px; margin: 0;" src="{{site.baseurl}}/images/msl_logo.png" />
         </span>
     </a>
 
@@ -13,25 +13,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mx-auto align-items-center d">
         <li class="my-0">
-            <a class="navbar-brand d-none d-sm-block my-0 mr-4 mr-lg-5 ml-0" href="/">
-                    <img class="my-0 img-responsive" style="max-height: 50px;" src="{{site.url}}/images/msl_logo.png" />
+            <a class="navbar-brand d-none d-sm-block my-0 mr-4 mr-lg-5 ml-0" href="{{site.baseurl}}/">
+                    <img class="my-0 img-responsive" style="max-height: 50px;" src="{{site.baseurl}}/images/msl_logo.png" />
             </a>
         </li>
       {% for nav in site.nav %}
         {% if page.url contains nav.href %}
             <!-- current page is active; set nav class -->
             <li class="nav-item my-0">
-                <a class='nav-link active py-0' target="{{nav.target}}" href="{{ nav.href }}">{{ nav.name }}</a>
+                <a class='nav-link active py-0' target="{{nav.target}}" href="{{ nav.href | relative_url}}">{{ nav.name }}</a>
             </li>
         {% else %}
             <li class="nav-item my-0">
-                <a class='nav-link py-0' target="{{nav.target}}" href="{{ nav.href }}">{{ nav.name }}</a>
+                <a class='nav-link py-0' target="{{nav.target}}" href="{{ nav.href | relative_url}}">{{ nav.name }}</a>
             </li>
         {% endif %}
       {% endfor %}
       <li class="my-0">
           <a class="navbar-brand d-none d-sm-block my-0 mr-0 ml-4 ml-lg-5" href="https://www.stanford.edu/">
-                  <img class="my-0 img-responsive" style="max-height: 45px;" src="{{site.url}}/images/stanford_logo.png" />
+                  <img class="my-0 img-responsive" style="max-height: 45px;" src="{{site.baseurl}}/images/stanford_logo.png" />
           </a>
       </li>
     </ul>

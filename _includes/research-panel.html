@@ -30,17 +30,18 @@
                             <h4 style="{{h_tag}}">{{title}}</h4>
                         </div>
                     </div>
+                    <!-- TODO(pculbert): fix the hard-coded height css hack going on here w/ the project-badge class -->
                     {% for p in projects_sorted %}
                         {% if p.type contains cat and p.featured %}
                             {% unless projects_used contains p.title %}
                                 <div class="row">
                                     <div class="d-flex flex-column col-12">
-                                        <div class="d-flex flex-column mx-1 my-2 p-2 shadow project-badge badge-panel align-items-center" style="height: 40vh;">
+                                        <div class="d-flex flex-column mx-1 my-2 px-2 pt-2 shadow project-badge badge-panel align-items-center">
                                             <div class="d-flex ">
-                                                <img class="img-fluid project-badge" src="/images/projects/{{p.image}}" />
+                                                <img class="img-fluid project-badge" src="{{site.baseurl}}/images/projects/{{p.image}}" />
                                             </div>
                                             <div class="d-flex my-auto">
-                                                    <a href="{{site.url}}{{p.url}}">{{p.title}}</a>
+                                                    <a href="{{site.baseurl}}{{p.url}}">{{p.title}}</a>
                                             </div>
                                         </div>
                                     </div>

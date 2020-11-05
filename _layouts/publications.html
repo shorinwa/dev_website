@@ -9,14 +9,14 @@ layout: default
   <div class="publication-content">
   <p class="publication-descrip"> Our research spans across robotic problems from estimation through planning to control with a focus on efficent distributed algorithms for multi-robots platforms.
   </p>
-  
+
   <div class="publication-nav">
     <span>View Publications</span>
-  
+
     <ul class="nav nav-tabs">
     {% if page.title == "Publications" %}
        {% assign active-tab = "active" %}
-    {% else %}       
+    {% else %}
        {% assign active-tab = "" %}
     {% endif %}
 
@@ -26,16 +26,16 @@ layout: default
 {% for pub_tag in site.publication_tags %}
     {% if page.title == pub_tag.title %}
        {% assign active-tab = "active" %}
-    {% else %}       
+    {% else %}
        {% assign active-tab = "" %}
     {% endif %}
-    
+
     <li class="nav-item {{active-tab}}">
-      <a class="nav-link {{active-tab}}" href="{{site.url}}{{pub_tag.url}}" data-toggle="">{{pub_tag.title}}</a>
+      <a class="nav-link {{active-tab}}" href="{{site.baseurl}}{{pub_tag.url}}" data-toggle="">{{pub_tag.title}}</a>
     </li>
 {% endfor %}
   </ul>
-  
+
   </div>
 
   {{ content }}

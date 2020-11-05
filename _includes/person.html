@@ -1,15 +1,15 @@
 <div class="list-item-people">
     <p class="list-post-title">
-        <a href="{{site.url}}{{person.url}}">
+        <a href="{{site.baseurl}}{{person.url}}">
             <img
                 class="profile-thumbnail"
                 {% if person.avatar %}
-                    src="{{site.url}}/images/people/{{person.avatar}}">
+                    src="{{site.baseurl}}/images/people/{{person.avatar}}">
                 {% else %}
-                    src="{{site.url}}/images/people/stanford_tree.png">
+                    src="{{site.baseurl}}/images/people/stanford_tree.png">
                 {% endif %}
         </a>
-        <a class="name" href="{{site.url}}{{person.url}}">
+        <a class="name" href="{{site.baseurl}}{{person.url}}">
             <b>{{person.name}}</b>
         </a>
     </p>
